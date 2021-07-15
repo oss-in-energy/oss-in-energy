@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://jounathaen.github.io/opensource-in-energy/"
 languageCode = "en-us"
 theme = "hyde"
 title = "Open Source in Energy"

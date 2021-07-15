@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          submodule: true
+          submodules: true
       - name: install requirements
         run: pip install -r requirements.txt
         working-directory: parser
@@ -17,13 +17,16 @@ jobs:
         run: python yaml_to_html.py
         working-directory: parser
       - run: ls -lah parser
+      - run: sudo apt-get install -y hugo
       - name: generate page
-        run: mkdir site && cp parser/table.html parser/table.css site
+        run: |
+         hugo -D
+      - run: ls -lah public
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: site
+          build_dir: public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
