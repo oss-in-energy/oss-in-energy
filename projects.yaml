@@ -4,11 +4,24 @@ Simulation:
     repository: "https://git.rwth-aachen.de/acs/public/simulation/DistAIXFramework/distaix"
     description: "DistAIX is a simulator for cyber-physical power systems that makes use of high performance computing techniques to scale up the simulation."
     license: "GPLv3"
+
 Modeling:
   - name: "OSeMOSYS"
     repository: "https://github.com/OSeMOSYS/OSeMOSYS"
     description: "OSeMOSYS is a full-fledged systems optimization model generator for long-term energy planning"
     homepage: "http://www.osemosys.org/"
+
+  - name: "Calliope"
+    repository: "https://github.com/calliope-project/calliope"
+    description: "Calliope is a multi-scale energy system modelling framework"
+    homepage: "https://www.callio.pe/"
+
+
+
+Optimization:
+  - name: "ficus"
+    repository: "https://github.com/tum-ewk/ficus"
+    description: "ficus is a (mixed integer) linear programming optimization model for capacity expansion planning and unit commitment for local energy systems."
 
 Other:
   - name: "Testproject"
