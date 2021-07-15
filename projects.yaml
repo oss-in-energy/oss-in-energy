@@ -16,10 +16,12 @@ Modeling:
     description: "Multi-scale energy system modelling framework"
     homepage: "https://www.callio.pe/"
 
-  - name: "oemof"
-    repository: "https://github.com/oemof"
-    description: "Modular open source framework to model energy supply systems"
-    homepage: "https://oemof.org/"
+  # This is a framework, i.e. it contains several repositories with different use cases
+  # TODO: How to handle this?
+  # - name: "oemof"
+  #   repository: "https://github.com/oemof"
+  #   description: "Modular open source framework to model energy supply systems"
+  #   homepage: "https://oemof.org/"
 
   - name: "FINE" # TODO: Could also be categorized as "Optimization"?
     repository: "https://github.com/FZJ-IEK3-VSA/FINE"
