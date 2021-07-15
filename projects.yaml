@@ -2,26 +2,42 @@ Simulation:
   - name: "DistAIX"
     homepage: "https://www.fein-aachen.org/projects/distaix/"
     repository: "https://git.rwth-aachen.de/acs/public/simulation/DistAIXFramework/distaix"
-    description: "DistAIX is a simulator for cyber-physical power systems that makes use of high performance computing techniques to scale up the simulation."
+    description: "Simulator for cyber-physical power systems that makes use of high performance computing techniques to scale up the simulation."
     license: "GPLv3"
 
 Modeling:
   - name: "OSeMOSYS"
     repository: "https://github.com/OSeMOSYS/OSeMOSYS"
-    description: "OSeMOSYS is a full-fledged systems optimization model generator for long-term energy planning"
+    description: "Full-fledged systems optimization model generator for long-term energy planning"
     homepage: "http://www.osemosys.org/"
 
   - name: "Calliope"
     repository: "https://github.com/calliope-project/calliope"
-    description: "Calliope is a multi-scale energy system modelling framework"
+    description: "Multi-scale energy system modelling framework"
     homepage: "https://www.callio.pe/"
 
+  - name: "oemof"
+    repository: "https://github.com/oemof"
+    description: "Modular open source framework to model energy supply systems"
+    homepage: "https://oemof.org/"
 
+  - name: "FINE" # TODO: Could also be categorized as "Optimization"?
+    repository: "https://github.com/FZJ-IEK3-VSA/FINE"
+    description: "The FINE python package provides a framework for modeling, optimizing and assessing energy systems"
 
 Optimization:
   - name: "ficus"
     repository: "https://github.com/tum-ewk/ficus"
-    description: "ficus is a (mixed integer) linear programming optimization model for capacity expansion planning and unit commitment for local energy systems."
+    description: "(Mixed integer) linear programming optimization model for capacity expansion planning and unit commitment for local energy systems."
+
+  - name: "Temoa" # TODO: Could also be categorized as "Modeling"?
+    repository: "https://github.com/TemoaProject/temoa"
+    description: "Tools for Energy Model Optimization and Analysis "
+    homepage: "https://temoacloud.com/"
+
+  - name: "urbs" # TODO: Could also be categorized as "Modeling"?
+    repository: "https://github.com/tum-ens/urbs"
+    description: "Linear optimisation model for distributed energy systems"
 
 Other:
   - name: "Testproject"
