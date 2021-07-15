@@ -1,10 +1,9 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-theme = "spf13/hyde"
-title = "OpenSource in Energy"
+theme = "hyde"
+title = "Open Source in Energy"
+custom_css = ["css/custom.css"]
 [params]
-disqusShortname = ""
-googleAnalytics = ""
 layoutReverse = false
 theme = "hyde"
-themeColor = ""
+themeColor = "theme-base-09"
