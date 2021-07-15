@@ -1,0 +1,10 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+theme = "spf13/hyde"
+title = "OpenSource in Energy"
+[params]
+disqusShortname = ""
+googleAnalytics = ""
+layoutReverse = false
+theme = "hyde"
+themeColor = ""
