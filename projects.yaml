@@ -5,6 +5,24 @@ Simulation:
     description: "Simulator for cyber-physical power systems that makes use of high performance computing techniques to scale up the simulation."
     license: "GPLv3"
 
+  - name: "MATPOWER"
+    repository: "https://github.com/MATPOWER/matpower"
+    description: "Steady state power flow simulation and optimization for MATLAB and Octave "
+    homepage: "https://matpower.org/"
+
+  - name: "PYPOWER"
+    repository: "https://github.com/rwl/PYPOWER"
+    description: "Port of MATPOWER to Python"
+    license: "BSD"
+
+  - name: "PyPSA"
+    repository: "https://github.com/PyPSA/PyPSA"
+    description: "Python for Power System Analysis"
+
+  - name: "renpass"
+    repository: "https://github.com/fraukewiese/renpass"
+    description: "Renewable Energy Pathways Simulation System"
+
 Modeling:
   - name: "OSeMOSYS"
     repository: "https://github.com/OSeMOSYS/OSeMOSYS"
@@ -27,6 +45,26 @@ Modeling:
     repository: "https://github.com/FZJ-IEK3-VSA/FINE"
     description: "The FINE python package provides a framework for modeling, optimizing and assessing energy systems"
 
+  - name: "Balmorel" #TODO: Are models part of "Modeling"?
+    repository: "http://balmorel.com/index.php/downloadmodel"
+    description: "Partial equilibrium model for analysing the electricity and combined heat and power sectors in an international perspective"
+    license: "ISC"
+    languages:
+      - "GAMS"
+
+  - name: "Dispa-SET"
+    repository: "https://github.com/energy-modelling-toolkit/Dispa-SET"
+    description: "Unit-commitment and optimal dispatch model, developed at the JRC "
+     
+  - name: "energyRt"
+    repository: "https://github.com/energyRt/energyRt/"
+    description: "R package to develop Reference Energy System (RES) models and analyze energy-technologies"
+
+  - name: "pandapower"
+    repository: "https://github.com/e2nIEE/pandapower"
+    description: "Convenient Power System Modelling and Analysis based on PYPOWER and pandas"
+    homepage: "https://www.pandapower.org/"
+ 
 Optimization:
   - name: "ficus"
     repository: "https://github.com/tum-ewk/ficus"
@@ -40,6 +78,47 @@ Optimization:
   - name: "urbs" # TODO: Could also be categorized as "Modeling"?
     repository: "https://github.com/tum-ens/urbs"
     description: "Linear optimisation model for distributed energy systems"
+
+  - name: "DIETER"
+    repository: "https://www.diw.de/de/diw_01.c.599753.de/modelle.html"
+    description: "Dispatch and Investment Evaluation Tool with Endogenous Renewables"
+    homepage: "https://www.diw.de/de/diw_01.c.599753.de/modelle.html"
+    license: "MIT" # TODO: Input data licensed under CC BY-SA 4.0 - How to handle multiple licenses?
+    languages:
+      - "GAMS"
+
+  - name: "OnSSET"
+    repository: "https://github.com/KTH-dESA/OnSSET-2016"
+    description: "GIS based optimization tool to support electrification planning and decision making or the achievement of energy access goals in currently unserved locations"
+    homepage: "http://www.onsset.org/"
+
+  - name: "dhmin" #TODO: Are models part of "Modeling"?
+    repository: "https://github.com/tum-ens/dhmin"
+    description: "Mathematical optimisation model for district energy distrubtion networks"
+
+  - name: "minpower"
+    repository: "https://github.com/adamgreenhall/minpower"
+    description: "Toolkit for students and researchers in power systems"
+    license: "MIT"
+    homepage: "http://adamgreenhall.github.io/minpower/index.html"
+
+  - name: "MOST"
+    repository: "https://github.com/MATPOWER/most"
+    description: "MATPOWER Optimal Scheduling Tool, for steady-state power systems scheduling problems"
+
+  - name: "NEMO"
+    repository: "https://github.com/bje-/NEMO"
+    description: "National Electricity Market Optimiser"
+
+  - name: "rivus"
+    repository: "https://github.com/tum-ens/rivus"
+    description: "Mixed integer linear optimisation model for energy infrastructure networks "
+      
+  - name: "Switch"
+    repository: "https://github.com/switch-model/switch"
+    description: "Modern Platform for Planning High-Renewable Power Systems"
+    homepage: "http://switch-model.org/"
+    license: "Apache-2.0"
 
 Other:
   - name: "Testproject"
