@@ -30,8 +30,11 @@ with open("../projects.yaml", "r") as stream:
                 htmlfile.write('<tbody style="font-size: 15px">\n')
                 for proj in proj_list:
                     htmlfile.write(f'<tr>\n')
-                    for entry in proj:
-                        htmlfile.write(f"<td>{entry}</td>\n")
+                    for entry, style in proj:
+                        if style is not None:
+                            htmlfile.write(f'<td style="{style}">{entry}</td>\n')
+                        else:
+                            htmlfile.write(f"<td>{entry}</td>\n")
                     htmlfile.write(f'</tr>\n')
                 htmlfile.write('</tbody>\n')
                 htmlfile.write('</table>\n')

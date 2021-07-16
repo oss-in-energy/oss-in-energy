@@ -155,7 +155,7 @@ class OpenSourceProject:
             ("First Release", None,),
         ]
 
-    def to_list(self) -> List[str]:
+    def to_list(self) -> List[Tuple[str, Optional[str]]]:
         def simple_url(url: str) -> str:
             retval = f'<a href="{url}">{url}</a>'
             return retval
@@ -170,15 +170,15 @@ class OpenSourceProject:
             return ", ".join(l)
 
         return [
-            self.name,
-            safe_fmt(self.repository, simple_url),
-            self.description,
-            safe_fmt(self.homepage, simple_url),
-            safe_fmt(self.license_name, License.as_html),
-            safe_fmt(self.languages, fmt_list),
-            safe_fmt(self.tags, fmt_list),
-            # self.category,
-            safe_fmt(self.last_update, Activity.as_html),
-            safe_fmt(self.latest_release, Activity.as_html),
-            safe_fmt(self.first_release, Activity.as_html),
+            (self.name, None),
+            (safe_fmt(self.repository, simple_url), None),
+            (self.description, None),
+            (safe_fmt(self.homepage, simple_url), None),
+            (safe_fmt(self.license_name, License.as_html), None),
+            (safe_fmt(self.languages, fmt_list), None),
+            (safe_fmt(self.tags, fmt_list), None),
+            # (self.category, None),
+            (safe_fmt(self.last_update, Activity.as_html), "text-align: center"),
+            (safe_fmt(self.latest_release, Activity.as_html),"text-align: center"),
+            (safe_fmt(self.first_release, Activity.as_html), "text-align: center"),
         ]
