@@ -140,19 +140,19 @@ class OpenSourceProject:
         )
 
     @classmethod
-    def list_headers(cls):
+    def list_headers(cls) -> List[Tuple[str, Optional[str]]]:
         return [
-            "Project",
-            "Repository URL",
-            "Description",
-            "Homepage",
-            "License",
-            "Languages",
-            "Tags/Topics",
-            # "Category",
-            "Last Update",
-            "Latest Release",
-            "First Release",
+            ("Project", "width: 10%"),
+            ("Repository URL", "width: 12.5%"),
+            ("Description", "width: 20%"),
+            ("Homepage", "width: 12.5%"),
+            ("License", None),
+            ("Languages", "width: 10%"),
+            ("Tags/Topics", "width: 10%"),
+            # ("Category", None),
+            ("Last Update", None),
+            ("Latest Release", None),
+            ("First Release", None,),
         ]
 
     def to_list(self) -> List[str]:

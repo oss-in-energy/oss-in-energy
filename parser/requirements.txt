@@ -1,5 +1,4 @@
 pyyaml
-tabulate
 validators
 pygithub
 python-dateutil
