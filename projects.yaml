@@ -55,7 +55,7 @@ Modeling:
   - name: "Dispa-SET"
     repository: "https://github.com/energy-modelling-toolkit/Dispa-SET"
     description: "Unit-commitment and optimal dispatch model, developed at the JRC "
-     
+
   - name: "energyRt"
     repository: "https://github.com/energyRt/energyRt/"
     description: "R package to develop Reference Energy System (RES) models and analyze energy-technologies"
@@ -64,7 +64,7 @@ Modeling:
     repository: "https://github.com/e2nIEE/pandapower"
     description: "Convenient Power System Modelling and Analysis based on PYPOWER and pandas"
     homepage: "https://www.pandapower.org/"
- 
+
 Optimization:
   - name: "ficus"
     repository: "https://github.com/tum-ewk/ficus"
@@ -113,7 +113,7 @@ Optimization:
   - name: "rivus"
     repository: "https://github.com/tum-ens/rivus"
     description: "Mixed integer linear optimisation model for energy infrastructure networks "
-      
+
   - name: "Switch"
     repository: "https://github.com/switch-model/switch"
     description: "Modern Platform for Planning High-Renewable Power Systems"
