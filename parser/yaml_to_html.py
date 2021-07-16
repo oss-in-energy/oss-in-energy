@@ -14,7 +14,7 @@ with open("../projects.yaml", "r") as stream:
                     print(project)
                     proj_list.append(project.to_list())
 
-                htmlfile.write(f"<h1>{category}</h1>\n")
+                htmlfile.write(f"<h2>{category}</h2>\n")
 
                 htmlfile.write(f'<table style="table-layout: fixed; width: 250%">')
                 htmlfile.write(f'<thead>\n')
