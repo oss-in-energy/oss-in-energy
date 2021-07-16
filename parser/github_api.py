@@ -1,16 +1,17 @@
 from datetime import datetime
+from os import environ
 from typing import List, Optional, Tuple
 from urllib.parse import urlparse
 
 from dateutil.parser import parse
 from github import Github
-from github.Repository import Repository
 from github.GithubException import UnknownObjectException
+from github.Repository import Repository
 
 from project_types import Activity, License
 
-# TODO: Potentially use an API Token from Environment variables here
-github_api = Github()
+api_key = environ.get("GITHUB_API_KEY")
+github_api = Github() if api_key is None else Github(api_key)
 
 
 class GithubRepo:
