@@ -20,9 +20,11 @@ class GithubRepo:
     def __init__(self, url: str):
         parsed_url = urlparse(url)
         assert parsed_url.netloc == "github.com"
-        assert len(parsed_url.path.split("/")) == 3
 
-        repo = github_api.get_repo(parsed_url.path.lstrip("/"))
+        repo_path = parsed_url.path.rstrip('/').lstrip("/")
+        # TODO: Also allow a length of 1 here for Github organizations
+        assert len(repo_path.split("/")) == 2
+        repo = github_api.get_repo(repo_path)
         self.url = url
         self.repo = repo
 
