@@ -1,4 +1,4 @@
-baseURL = "https://jounathaen.github.io/opensource-in-energy/"
+baseURL = "https://oss-in-energy.github.io/oss-in-energy/"
 languageCode = "en-us"
 theme = "hyde"
 title = "Open-Source in Energy"
@@ -15,5 +15,5 @@ page = "https://www.acs.eonerc.rwth-aachen.de"
 
 [Menus]
 main = [
-    {Name = "Github", URL = "https://github.com/username/"},
+    {Name = "Github", URL = "https://github.com/oss-in-energy/oss-in-energy"},
 ]
