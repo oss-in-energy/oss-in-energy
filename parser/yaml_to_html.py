@@ -45,7 +45,7 @@ with open("../projects.yaml", "r") as stream:
                 htmlfile.write("</thead>\n")
 
                 htmlfile.write('<tbody style="font-size: 15px">\n')
-                for proj in projects[category]:
+                for proj in sorted(projects[category], key= lambda proj: proj.name):
                     htmlfile.write(f"<tr>\n")
                     for entry, style in proj.to_list():
                         if style is not None:
