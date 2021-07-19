@@ -1,17 +1,13 @@
-# - name: ""
-#   repository: ""
-#   description: ""
-
 Simulation:
   - name: "DistAIX"
     homepage: "https://www.fein-aachen.org/projects/distaix/"
     repository: "https://git.rwth-aachen.de/acs/public/simulation/DistAIXFramework/distaix"
-    description: "Simulator for cyber-physical power systems that makes use of high performance computing techniques to scale up the simulation."
+    description: "Simulator for cyber-physical power systems that makes use of high performance computing techniques to scale up the simulation"
     license: "GPLv3"
 
   - name: "MATPOWER"
     repository: "https://github.com/MATPOWER/matpower"
-    description: "Steady state power flow simulation and optimization for MATLAB and Octave "
+    description: "Steady state power flow simulation and optimization for MATLAB and Octave"
     homepage: "https://matpower.org/"
 
   - name: "PYPOWER"
@@ -33,7 +29,10 @@ Simulation:
     homepage: "https://smartgrid.epri.com/SimulationTool.aspx"
     license: "EPL-2.0"
 
-
+  - name: "DPsim"
+    repository: "https://github.com/sogno-platform/dpsim"
+    description: "Real-time power system simulator (powerflow, dynamic phasors, EMT)"
+    homepage: "https://dpsim.fein-aachen.org/"
 
 Modeling:
   - name: "OSeMOSYS"
@@ -46,10 +45,10 @@ Modeling:
     description: "Multi-scale energy system modelling framework"
     homepage: "https://www.callio.pe/"
 
-  - name: "oemof"
-    repository: "https://github.com/oemof"
-    description: "Modular open source framework to model energy supply systems"
-    homepage: "https://oemof.org/"
+  # - name: "oemof"
+  #   repository: "https://github.com/oemof"
+  #   description: "Modular open source framework to model energy supply systems"
+  #   homepage: "https://oemof.org/"
 
   - name: "FINE" # TODO: Could also be categorized as "Optimization"?
     repository: "https://github.com/FZJ-IEK3-VSA/FINE"
@@ -64,7 +63,7 @@ Modeling:
 
   - name: "Dispa-SET"
     repository: "https://github.com/energy-modelling-toolkit/Dispa-SET"
-    description: "Unit-commitment and optimal dispatch model, developed at the JRC "
+    description: "Unit-commitment and optimal dispatch model, developed at the JRC"
 
   - name: "energyRt"
     repository: "https://github.com/energyRt/energyRt/"
@@ -75,14 +74,19 @@ Modeling:
     description: "Convenient Power System Modelling and Analysis based on PYPOWER and pandas"
     homepage: "https://www.pandapower.org/"
 
+  - name: "State Space Model for Distribution Grids (SSMD)"
+    repository: "https://git.rwth-aachen.de/acs/public/simulation/ssmd"
+    description: "Matlab code to generate the state-space matrices of electrical distribution grids"
+    license: "GPLv3" # Coud not be parsed automatically?
+
 Optimization:
   - name: "ficus"
     repository: "https://github.com/tum-ewk/ficus"
-    description: "(Mixed integer) linear programming optimization model for capacity expansion planning and unit commitment for local energy systems."
+    description: "(Mixed integer) linear programming optimization model for capacity expansion planning and unit commitment for local energy systems"
 
   - name: "Temoa" # TODO: Could also be categorized as "Modeling"?
     repository: "https://github.com/TemoaProject/temoa"
-    description: "Tools for Energy Model Optimization and Analysis "
+    description: "Tools for Energy Model Optimization and Analysis"
     homepage: "https://temoacloud.com/"
 
   - name: "urbs" # TODO: Could also be categorized as "Modeling"?
@@ -122,7 +126,7 @@ Optimization:
 
   - name: "rivus"
     repository: "https://github.com/tum-ens/rivus"
-    description: "Mixed integer linear optimisation model for energy infrastructure networks "
+    description: "Mixed integer linear optimisation model for energy infrastructure networks"
 
   - name: "Switch"
     repository: "https://github.com/switch-model/switch"
@@ -135,7 +139,36 @@ Platform:
     repository: "https://github.com/OpenEMS/openems/"
     description: "Modular platform for energy management applications"
     homepage: "https://openems.io/"
+    license: "EPL-2.0 / APGLv3"
 
+Interfaces:
+  - name: "CoSIF"
+    repository: "https://git.rwth-aachen.de/acs/public/simulation/cosif"
+    description: "A collection of co-simulation Interface Algorithms (IA) for (geographically) distributed real-time simulation"
+    homepage: "https://www.fein-aachen.org/en/projects/cosif/"
+    license: "GPLv3"
+
+Forecasting:
+  - name: "ProLoaF"
+    repository: "https://github.com/sogno-platform/proloaf"
+    description: "A probabilistic load forecasting project"
+
+State_estimation:
+  - name: "pyVolt"
+    repository: "https://git.rwth-aachen.de/acs/public/automation/se/pyvolt"
+    description: "State estimation and powerflow algorithms"
+    license: "MPL 2.0"
+
+  - name: "Distribution System State Estimator (DSSE)"
+    repository: "https://git.rwth-aachen.de/acs/public/automation/dsse"
+    description: "Matlab code of a voltage and current state estimator for distribution systems"
+    homepage: "https://www.fein-aachen.org/projects/dsse/"
+    license: "GPLv3"
+
+Control:
+  - name: "CoVee"
+    repository: "https://github.com/sogno-platform/covee"
+    description: "Python package implementing several voltage control methods"
 
 Other:
   - name: "Testproject"
@@ -157,3 +190,30 @@ Other:
     description: "Another Testproject without a meaning"
     first_release: "2021-05-04"
     license: "MIT"
+
+  - name: "pyCity_base"
+    repository: "https://github.com/RWTH-EBC/pyCity"
+    description: "Python package for data handling and scenario generation of city districts"
+
+  - name: "VILLASnode"
+    repository: "https://git.rwth-aachen.de/acs/public/villas/node"
+    description: "Connecting real-time power grid simulation equipment"
+    license: "GPLv3"
+
+  - name: "pycity_scheduling"
+    repository: "https://git.rwth-aachen.de/acs/public/simulation/pycity_scheduling"
+    description: "A Python framework for the development and assessment of optimisation-based power scheduling algorithms for multi-energy systems in city districts"
+    license: "MIT"
+
+  - name: "CIMpy"
+    repository: "https://git.rwth-aachen.de/acs/public/cim/cimpy"
+    description: "Import / export CIM IEC-61970 files in the XML/RDF format"
+    license: "MPL 2.0"
+
+  - name: "libcimpp"
+    repository: "https://github.com/sogno-platform/libcimpp"
+    description: "Deserialiser library for C++ objects from XML/RDF documents based on CIM standards"
+
+  - name: "Pintura"
+    repository: "https://github.com/sogno-platform/pintura"
+    description: "Standalone graphical power system topology editor and library to be used in web applications"
