@@ -1,3 +1,7 @@
+# - name: ""
+#   repository: ""
+#   description: ""
+
 Simulation:
   - name: "DistAIX"
     homepage: "https://www.fein-aachen.org/projects/distaix/"
@@ -23,6 +27,14 @@ Simulation:
     repository: "https://github.com/fraukewiese/renpass"
     description: "Renewable Energy Pathways Simulation System"
 
+  - name: "OpenDSS"
+    repository: "https://sourceforge.net/projects/electricdss/files/"
+    description: "EPRI Distribution System Simulator"
+    homepage: "https://smartgrid.epri.com/SimulationTool.aspx"
+    license: "EPL-2.0"
+
+
+
 Modeling:
   - name: "OSeMOSYS"
     repository: "https://github.com/OSeMOSYS/OSeMOSYS"
@@ -34,12 +46,10 @@ Modeling:
     description: "Multi-scale energy system modelling framework"
     homepage: "https://www.callio.pe/"
 
-  # This is a framework, i.e. it contains several repositories with different use cases
-  # TODO: How to handle this?
-  # - name: "oemof"
-  #   repository: "https://github.com/oemof"
-  #   description: "Modular open source framework to model energy supply systems"
-  #   homepage: "https://oemof.org/"
+  - name: "oemof"
+    repository: "https://github.com/oemof"
+    description: "Modular open source framework to model energy supply systems"
+    homepage: "https://oemof.org/"
 
   - name: "FINE" # TODO: Could also be categorized as "Optimization"?
     repository: "https://github.com/FZJ-IEK3-VSA/FINE"
@@ -119,6 +129,13 @@ Optimization:
     description: "Modern Platform for Planning High-Renewable Power Systems"
     homepage: "http://switch-model.org/"
     license: "Apache-2.0"
+
+Platform:
+  - name: "OpenEMS"
+    repository: "https://github.com/OpenEMS/openems/"
+    description: "Modular platform for energy management applications"
+    homepage: "https://openems.io/"
+
 
 Other:
   - name: "Testproject"
