@@ -206,3 +206,12 @@ Other:
     homepage: http://www.pandapower.org/
     languages:
     - python
+
+  - name: OpenEMS
+    description: OpenEMS - the Open Source Energy Management System - is a modular platform for energy management applications.
+    repository: https://github.com/OpenEMS/openems
+    homepage: https://openems.io/
+    license: AGPL-3.0
+    languages:
+      - java
+    
