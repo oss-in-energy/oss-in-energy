@@ -40,6 +40,40 @@ Simulation:
     homepage: https://mosaik.offis.de/
     license: LGPL-2.1
 
+  - name: VILLASweb
+    description: VILLASweb is a Javascript/React-based web frontend to manage simulators, simulations and models. It provides an interface to monitor and interact with simulations in real-time.
+    repository: https://git.rwth-aachen.de/acs/public/villas/web
+    homepage: https://fein-aachen.org/projects/villas-web/
+    license: GPL-3.0
+    languages:
+      - javascript
+
+  - name: VILLAScontroller
+    description: "VILLAScontroller is a set of Python scripts to control the different components which comprise a co-simulation: Simulators, Gateway-nodes, Databases."
+    repository: https://git.rwth-aachen.de/acs/public/villas/controller
+    homepage: https://fein-aachen.org/projects/villas-controller/
+    license: GPL-3.0
+    languages:
+      - python
+
+  - name: VILLASfpga
+    description: VILLASfpga is an extension to VILLASnode for hard real-time / FPGA-supported simulation.
+    repository: https://git.rwth-aachen.de/acs/public/villas/fpga
+    homepage: https://fein-aachen.org/projects/villas-fpga/
+    license: GPL-3.0
+    languages:
+      - vhdl
+      - verilog
+      - c++
+
+  - name: VILLASdataprocessing
+    description: VILLASdataprocessing is a collection of Python utitlities to support post-processing of power system simulation results.
+    repository: https://git.rwth-aachen.de/acs/public/villas/dataprocessing
+    license: Apache-2.0
+    languages:
+      - python
+
+
 Modeling:
   - name: "OSeMOSYS"
     repository: "https://github.com/OSeMOSYS/OSeMOSYS"
@@ -228,5 +262,13 @@ Other:
     repository: https://github.com/OpenEMS/openems
     homepage: https://openems.io/
     license: AGPL-3.0
+    languages:
+      - java
+
+  - name: volkszaehler.org
+    description: volkszaehler.org is a free do-it-yourself smart meter. The user retains complete control over the electricity, water & gas costs incurred.
+    repository: https://github.com/volkszaehler/volkszaehler.org
+    homepage: https://volkszaehler.org/
+    license: GPL-3.0
     languages:
       - java
