@@ -198,3 +198,11 @@ Other:
   - name: "Pintura"
     repository: "https://github.com/sogno-platform/pintura"
     description: "Standalone graphical power system topology editor and library to be used in web applications"
+
+  - name: pandapower
+    description: An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation.
+    repository: https://github.com/e2nIEE/pandapower
+    license: BSD-3-Clause
+    homepage: http://www.pandapower.org/
+    languages:
+    - python
