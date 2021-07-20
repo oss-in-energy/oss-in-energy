@@ -31,12 +31,8 @@ class GitlabRepo:
 
         repo_path = parsed_url.path.rstrip("/").lstrip("/")
 
-        try:
-            gl = Gitlab(parsed_url.scheme + "://" + parsed_url.netloc)
-            repo = gl.projects.get(repo_path)
-        except (GitlabGetError, GitlabHttpError):
-            print(f"Warning: {url} doesn't seem to be a Gitlab repository")
-            return None
+        gl = Gitlab(parsed_url.scheme + "://" + parsed_url.netloc)
+        repo = gl.projects.get(repo_path)
 
         self.url = url
         self.repo = repo
