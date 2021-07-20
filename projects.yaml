@@ -73,6 +73,15 @@ Simulation:
     languages:
       - python
 
+  - name: HELICS
+    description: Hierarchical Engine for Large-scale Infrastructure Co-Simulation
+    homepage: https://helics.org/
+    repository: https://github.com/GMLC-TDC/HELICS
+    license: BSD-3-Clause
+    lanaguages:
+    - c++
+    - c
+    - java
 
 Modeling:
   - name: "OSeMOSYS"
