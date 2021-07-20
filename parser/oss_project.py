@@ -79,7 +79,10 @@ class OpenSourceProject:
         if parsed_repo_url.netloc == "github.com":
             repo_api = GithubRepo(repository)
         else:
-            repo_api = GitlabRepo(repository)
+            try:
+                repo_api = GitlabRepo(repository)
+            except:
+                pass
 
         description = get_dict_value(d, "description")
         assert isinstance(
