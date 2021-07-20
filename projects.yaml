@@ -59,9 +59,14 @@ Modeling:
     repository: "http://balmorel.com/index.php/downloadmodel"
     description: "Partial equilibrium model for analysing the electricity and combined heat and power sectors in an international perspective"
     license: "ISC"
-    languages:
-      - "GAMS"
 
+  - name: CIMdraw
+    description: CIMDraw is a WebApp to view IEC CIM (CGMES) files
+    repository: https://github.com/danielePala/CIMDraw
+    homepage: https://danielepala.github.io/CIMDraw/
+    license: GPL-3.0
+
+Other:
   - name: "Dispa-SET"
     repository: "https://github.com/energy-modelling-toolkit/Dispa-SET"
     description: "Unit-commitment and optimal dispatch model, developed at the JRC"
@@ -214,4 +219,3 @@ Other:
     license: AGPL-3.0
     languages:
       - java
-    
