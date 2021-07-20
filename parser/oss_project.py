@@ -160,7 +160,10 @@ class OpenSourceProject:
             # ("Category", None),
             ("Last Update", None),
             ("Latest Release", None),
-            ("First Release", None,),
+            (
+                "First Release",
+                None,
+            ),
         ]
 
     def to_list(self) -> List[Tuple[str, Optional[str]]]:
@@ -187,7 +190,7 @@ class OpenSourceProject:
             (safe_fmt(self.tags, fmt_list), None),
             # (self.category, None),
             (safe_fmt(self.last_update, Activity.as_html), "text-align: center"),
-            (safe_fmt(self.latest_release, Activity.as_html),"text-align: center"),
+            (safe_fmt(self.latest_release, Activity.as_html), "text-align: center"),
             (safe_fmt(self.first_release, Activity.as_html), "text-align: center"),
         ]
 

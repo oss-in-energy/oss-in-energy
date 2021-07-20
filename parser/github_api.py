@@ -53,7 +53,7 @@ class GithubRepo:
             # Probably no License found
             return None
 
-    def get_last_activity(self) -> Activity:
+    def get_last_activity(self) -> Optional[Activity]:
         last_commit = self.repo.get_commits()[0]
         date = parse(last_commit.last_modified).date()
         return Activity(date, last_commit.html_url)
