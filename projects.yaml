@@ -34,6 +34,11 @@ Simulation:
     repository: "https://github.com/sogno-platform/dpsim"
     description: "Real-time power system simulator (powerflow, dynamic phasors, EMT)"
     homepage: "https://dpsim.fein-aachen.org/"
+  - name: Mosaik
+    description: Mosaik is a flexible Smart Grid co-simulation framework.
+    repository: https://gitlab.com/mosaik/mosaik
+    homepage: https://mosaik.offis.de/
+    license: LGPL-2.1
 
 Modeling:
   - name: "OSeMOSYS"
