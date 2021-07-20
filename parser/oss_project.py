@@ -7,6 +7,7 @@ import validators
 from dateutil.parser import parse
 
 from github_api import GithubRepo
+from gitlab_api import GitlabRepo
 from project_types import Activity, License
 
 # TODO: ist this a good approach?
@@ -73,10 +74,12 @@ class OpenSourceProject:
         repository = get_dict_value(d, "repository")
         assert isinstance(repository, str), "Project needs to have a valid url!"
 
-        repo_api = None
+        repo_api: Any = None
         parsed_repo_url = urlparse(repository)
         if parsed_repo_url.netloc == "github.com":
             repo_api = GithubRepo(repository)
+        else:
+            repo_api = GitlabRepo(repository)
 
         description = get_dict_value(d, "description")
         assert isinstance(
