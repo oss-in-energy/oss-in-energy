@@ -18,6 +18,7 @@ Simulation:
   - name: "PyPSA"
     repository: "https://github.com/PyPSA/PyPSA"
     description: "Python for Power System Analysis"
+    homepage: "https://pypsa.org/"
 
   - name: "renpass"
     repository: "https://github.com/fraukewiese/renpass"
@@ -171,26 +172,6 @@ Control:
     description: "Python package implementing several voltage control methods"
 
 Other:
-  - name: "Testproject"
-    repository: "https://github.com/hermitcore/uhyve"
-    description: "Testproject without a meaning"
-    homepage: "http://www.example.com/"
-    # first_release: "2021-05-04"
-    # license: "MIT"
-    languages:
-      - "Rust"
-      - "Pust"
-      - "Qust"
-    tags:
-      - "Cool Project"
-      - "Awesome Energy"
-
-  - name: "Testproject2"
-    repository: "https://github.com/bellingard/sample_multi-language-project"
-    description: "Another Testproject without a meaning"
-    first_release: "2021-05-04"
-    license: "MIT"
-
   - name: "pyCity_base"
     repository: "https://github.com/RWTH-EBC/pyCity"
     description: "Python package for data handling and scenario generation of city districts"
