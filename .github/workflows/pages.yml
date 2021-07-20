@@ -16,6 +16,8 @@ jobs:
       - name: create table
         run: python yaml_to_html.py
         working-directory: parser
+        env:
+          GITHUB_API_KEY: ${{ secrets.GH_API_KEY }}
       - run: sudo apt-get install -y hugo
       - name: generate page
         run: |
