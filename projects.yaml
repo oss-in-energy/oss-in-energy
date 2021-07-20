@@ -66,6 +66,12 @@ Modeling:
     homepage: https://danielepala.github.io/CIMDraw/
     license: GPL-3.0
 
+  - name: CIMTool
+    description: Creates interfaces and applications using the IEC Common Information Model (CIM).
+    repository: https://github.com/arnolddevos/CIMTool
+    homepage: https://wiki.cimtool.org/
+    license: LGPL-2.1
+
 Other:
   - name: "Dispa-SET"
     repository: "https://github.com/energy-modelling-toolkit/Dispa-SET"
