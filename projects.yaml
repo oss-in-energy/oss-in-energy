@@ -13,7 +13,6 @@ Simulation:
   - name: "PYPOWER"
     repository: "https://github.com/rwl/PYPOWER"
     description: "Port of MATPOWER to Python"
-    license: "BSD"
 
   - name: "PyPSA"
     repository: "https://github.com/PyPSA/PyPSA"
@@ -34,6 +33,7 @@ Simulation:
     repository: "https://github.com/sogno-platform/dpsim"
     description: "Real-time power system simulator (powerflow, dynamic phasors, EMT)"
     homepage: "https://dpsim.fein-aachen.org/"
+
   - name: Mosaik
     description: Mosaik is a flexible Smart Grid co-simulation framework.
     repository: https://gitlab.com/mosaik/mosaik
@@ -45,43 +45,28 @@ Simulation:
     repository: https://git.rwth-aachen.de/acs/public/villas/web
     homepage: https://fein-aachen.org/projects/villas-web/
     license: GPL-3.0
-    languages:
-      - javascript
 
   - name: VILLAScontroller
     description: "VILLAScontroller is a set of Python scripts to control the different components which comprise a co-simulation: Simulators, Gateway-nodes, Databases."
     repository: https://git.rwth-aachen.de/acs/public/villas/controller
     homepage: https://fein-aachen.org/projects/villas-controller/
     license: GPL-3.0
-    languages:
-      - python
 
   - name: VILLASfpga
     description: VILLASfpga is an extension to VILLASnode for hard real-time / FPGA-supported simulation.
-    repository: https://git.rwth-aachen.de/acs/public/villas/fpga
+    repository: https://git.rwth-aachen.de/acs/public/villas/fpga/fpga
     homepage: https://fein-aachen.org/projects/villas-fpga/
     license: GPL-3.0
-    languages:
-      - vhdl
-      - verilog
-      - c++
 
   - name: VILLASdataprocessing
     description: VILLASdataprocessing is a collection of Python utitlities to support post-processing of power system simulation results.
     repository: https://git.rwth-aachen.de/acs/public/villas/dataprocessing
     license: Apache-2.0
-    languages:
-      - python
 
   - name: HELICS
     description: Hierarchical Engine for Large-scale Infrastructure Co-Simulation
     homepage: https://helics.org/
     repository: https://github.com/GMLC-TDC/HELICS
-    license: BSD-3-Clause
-    lanaguages:
-    - c++
-    - c
-    - java
 
 Modeling:
   - name: "OSeMOSYS"
@@ -112,13 +97,11 @@ Modeling:
     description: CIMDraw is a WebApp to view IEC CIM (CGMES) files
     repository: https://github.com/danielePala/CIMDraw
     homepage: https://danielepala.github.io/CIMDraw/
-    license: GPL-3.0
 
   - name: CIMTool
     description: Creates interfaces and applications using the IEC Common Information Model (CIM).
     repository: https://github.com/arnolddevos/CIMTool
     homepage: https://wiki.cimtool.org/
-    license: LGPL-2.1
 
 Other:
   - name: "Dispa-SET"
@@ -192,7 +175,6 @@ Optimization:
     repository: "https://github.com/switch-model/switch"
     description: "Modern Platform for Planning High-Renewable Power Systems"
     homepage: "http://switch-model.org/"
-    license: "Apache-2.0"
 
 Platform:
   - name: "OpenEMS"
@@ -261,23 +243,14 @@ Other:
   - name: pandapower
     description: An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation.
     repository: https://github.com/e2nIEE/pandapower
-    license: BSD-3-Clause
     homepage: http://www.pandapower.org/
-    languages:
-    - python
 
   - name: OpenEMS
     description: OpenEMS - the Open Source Energy Management System - is a modular platform for energy management applications.
     repository: https://github.com/OpenEMS/openems
     homepage: https://openems.io/
-    license: AGPL-3.0
-    languages:
-      - java
 
   - name: volkszaehler.org
     description: volkszaehler.org is a free do-it-yourself smart meter. The user retains complete control over the electricity, water & gas costs incurred.
     repository: https://github.com/volkszaehler/volkszaehler.org
     homepage: https://volkszaehler.org/
-    license: GPL-3.0
-    languages:
-      - java
