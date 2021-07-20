@@ -166,7 +166,7 @@ class OpenSourceProject:
             ),
         ]
 
-    def to_list(self) -> List[Tuple[str, Optional[str]]]:
+    def to_html_list(self) -> List[Tuple[str, Optional[str]]]:
         def simple_url(url: str) -> str:
             retval = f'<a href="{url}">{url}</a>'
             return retval
@@ -239,7 +239,7 @@ class OpenSourceProjectList:
             htmlfile.write('<tbody style="font-size: 15px">\n')
             for proj in sorted(self.projects[category], key=lambda proj: proj.name):
                 htmlfile.write(f"<tr>\n")
-                for entry, style in proj.to_list():
+                for entry, style in proj.to_html_list():
                     if style is not None:
                         htmlfile.write(f'<td style="{style}">{entry}</td>\n')
                     else:
