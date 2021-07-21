@@ -267,3 +267,7 @@ Other:
     repository: "https://github.com/cim-iec/CIMverter"
     description: "Tool for converting power grid topology files based on CIM-XML-RDF into Modelica system models"
     license: "GPLv3"
+
+  - name: "IEC61850bean"
+    repository: "https://github.com/beanit/iec61850bean"
+    description: "Java IEC 61850 MMS stack for clients and servers"
