@@ -75,7 +75,7 @@ class GithubRepo:
     def get_license(self) -> Optional[License]:
         try:
             gh_license = self.repo.get_license()
-            return License(gh_license.license.name , gh_license.html_url)
+            return License(gh_license.license.name, gh_license.html_url)
         except UnknownObjectException:
             # Probably no License found
             return None
@@ -91,7 +91,7 @@ class GithubRepo:
         current_lang_sum = 0
         lang_list = []
         # Only keep the 80% most used langs here
-        for lang, loc in sorted (gh_langs.items(), key = lambda itm: itm[1], reverse = True):
+        for lang, loc in sorted(gh_langs.items(), key=lambda itm: itm[1], reverse=True):
             lang_list.append(lang)
             current_lang_sum += loc
             if current_lang_sum / lang_sum > 0.8:
