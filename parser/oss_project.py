@@ -1,3 +1,4 @@
+import re
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
@@ -244,7 +245,7 @@ class OpenSourceProjectList:
         return OpenSourceProjectList(projects)
 
     def write_as_html(self, htmlfile: TextIO):
-        for category in self.projects.keys():
+        for category in self.custom_sorted_categories():
             htmlfile.write(f"<h2>{category}</h2>\n")
 
             htmlfile.write(f'<table style="table-layout: fixed; width: 250%">')
@@ -259,7 +260,7 @@ class OpenSourceProjectList:
             htmlfile.write("</thead>\n")
 
             htmlfile.write('<tbody style="font-size: 15px">\n')
-            for proj in sorted(self.projects[category], key=lambda proj: proj.name):
+            for proj in self.projects_sorted(category):
                 htmlfile.write(f"<tr>\n")
                 for entry, style in proj.to_html_list():
                     if style is not None:
@@ -276,9 +277,25 @@ class OpenSourceProjectList:
             csvfile.write(f"{header};")
         csvfile.write("\n")
 
-        for category in self.projects.keys():
-            for proj in sorted(self.projects[category], key=lambda proj: proj.name):
+        for category in self.custom_sorted_categories():
+            for proj in self.projects_sorted(category):
                 csvfile.write(f"{category};")
                 for entry in proj.to_csv_list():
                     csvfile.write(f"{entry};")
                 csvfile.write(f"\n")
+
+    def projects_sorted(self, category: str) -> List[OpenSourceProject]:
+        def sort_projects_alphanumeric(l: List[OpenSourceProject]):
+            convert = lambda text: int(text) if text.isdigit() else str.casefold(text)
+            alphanum_key = lambda key: [
+                convert(c) for c in re.split("([0-9]+)", key.name)
+            ]
+            return sorted(l, key=alphanum_key)
+
+        return sort_projects_alphanumeric(self.projects[category])
+
+    def custom_sorted_categories(self) -> List[str]:
+        # Other category should always be at the end of the list
+        categories = sorted([c for c in self.projects.keys() if "Other" not in c])
+        categories.append("Other")
+        return categories
