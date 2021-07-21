@@ -23,7 +23,6 @@ class GithubRepo:
         assert parsed_url.netloc == "github.com"
 
         repo_path = parsed_url.path.rstrip('/').lstrip("/")
-        # TODO: Also allow a length of 1 here for Github organizations
         if len(repo_path.split("/")) == 1:
             return None
         assert len(repo_path.split("/")) == 2
