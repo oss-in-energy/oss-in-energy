@@ -5,10 +5,11 @@ from urllib.parse import urlparse
 
 from dateutil.parser import parse
 from github import Github
+from github.Tag import Tag
 from github.GithubException import UnknownObjectException
 from github.Repository import Repository
 
-from project_types import Activity, License
+from project_types import Activity, License, is_release_tag, sort_tags_alphanumeric
 
 api_key = environ.get("GITHUB_API_KEY")
 github_api = Github() if api_key is None else Github(api_key)
@@ -32,19 +33,44 @@ class GithubRepo:
         self.url = url
         self.repo = repo
 
+    def get_tag_nr(self, nr: int) -> Tag:
+        tags = list(self.repo.get_tags())
+        release_tags = sort_tags_alphanumeric(
+            filter(is_release_tag, tags),
+        )
+        tag = tags[nr]
+        return tag
+
+    def get_tag_activity(self, nr: int) -> Activity:
+        tag = self.get_tag_nr(nr)
+        # I have no clue, why you can't use tag.commit.last_modified here, but it delivers wrong values
+        commit = self.repo.get_commit(tag.commit.sha)
+        assert isinstance(commit.last_modified, str)
+        date = parse(commit.last_modified).date()
+        url = f"{self.repo.html_url}/releases/tag/{tag.name}"
+        return Activity(date, url)
+
     def get_latest_release(self) -> Optional[Activity]:
         try:
             latest_release = self.repo.get_releases()[0]
             return Activity(latest_release.created_at.date(), latest_release.html_url)
         except IndexError:
-            return None
+            # sometimes stuff is only available as tag in the API
+            try:
+                return self.get_tag_activity(0)
+            except IndexError:
+                return None
 
     def get_first_release(self) -> Optional[Activity]:
         try:
             first_release = self.repo.get_releases()[0]
             return Activity(first_release.created_at.date(), first_release.html_url)
         except IndexError:
-            return None
+            # sometimes stuff is only available as tag in the API
+            try:
+                return self.get_tag_activity(-1)
+            except IndexError:
+                return None
 
     def get_license(self) -> Optional[License]:
         try:
