@@ -8,7 +8,6 @@ Forecasting:
     repository: "https://github.com/sogno-platform/proloaf"
     description: "A probabilistic load forecasting project"
 
-
 Interfaces:
   - name: "CoSIF"
     repository: "https://git.rwth-aachen.de/acs/public/simulation/cosif"
@@ -21,23 +20,30 @@ Modeling:
     repository: "https://github.com/OSeMOSYS/OSeMOSYS"
     description: "Full-fledged systems optimization model generator for long-term energy planning"
     homepage: "http://www.osemosys.org/"
+    languages:
+      - Python
+      - GAMS
 
   - name: "Calliope"
     repository: "https://github.com/calliope-project/calliope"
     description: "Multi-scale energy system modelling framework"
     homepage: "https://www.callio.pe/"
 
-  # - name: "oemof"
-  #   repository: "https://github.com/oemof"
-  #   description: "Modular open source framework to model energy supply systems"
-  #   homepage: "https://oemof.org/"
+  - name: "Open Energy Modelling Framework (oemof)"
+    repository: "https://github.com/oemof/oemof"
+    description: "Modular open source framework to model energy supply systems"
+    homepage: "https://oemof.org/"
+    # license: "MIT, BSD"
+    # languages:
+    #   - Python
 
   - name: "FINE" # TODO: Could also be categorized as "Optimization"?
     repository: "https://github.com/FZJ-IEK3-VSA/FINE"
     description: "The FINE python package provides a framework for modeling, optimizing and assessing energy systems"
 
   - name: "Balmorel" #TODO: Are models part of "Modeling"?
-    repository: "http://balmorel.com/index.php/downloadmodel"
+    repository: "https://github.com/balmorelcommunity/Balmorel"
+    homepage: "http://balmorel.com"
     description: "Partial equilibrium model for analysing the electricity and combined heat and power sectors in an international perspective"
     license: "ISC"
 
@@ -50,6 +56,7 @@ Modeling:
     description: Creates interfaces and applications using the IEC Common Information Model (CIM).
     repository: https://github.com/arnolddevos/CIMTool
     homepage: https://wiki.cimtool.org/
+    license: LGPL-2.1
 
 Optimization:
   - name: "ficus"
@@ -72,11 +79,13 @@ Optimization:
     license: "MIT" # TODO: Input data licensed under CC BY-SA 4.0 - How to handle multiple licenses?
     languages:
       - "GAMS"
+    first_release: 2015-06-19
 
   - name: "OnSSET"
     repository: "https://github.com/KTH-dESA/OnSSET-2016"
     description: "GIS based optimization tool to support electrification planning and decision making or the achievement of energy access goals in currently unserved locations"
     homepage: "http://www.onsset.org/"
+    license: MIT
 
   - name: "dhmin" #TODO: Are models part of "Modeling"?
     repository: "https://github.com/tum-ens/dhmin"
@@ -104,13 +113,7 @@ Optimization:
     repository: "https://github.com/switch-model/switch"
     description: "Modern Platform for Planning High-Renewable Power Systems"
     homepage: "http://switch-model.org/"
-
-Platform:
-  - name: "OpenEMS"
-    repository: "https://github.com/OpenEMS/openems/"
-    description: "Modular platform for energy management applications"
-    homepage: "https://openems.io/"
-    license: "EPL-2.0 / APGLv3"
+    license: Apache-2.0
 
 Simulation:
   - name: "DistAIX"
@@ -123,10 +126,12 @@ Simulation:
     repository: "https://github.com/MATPOWER/matpower"
     description: "Steady state power flow simulation and optimization for MATLAB and Octave"
     homepage: "https://matpower.org/"
+    license: "Code: BSD-3-Clause, Case files: Other"
 
   - name: "PYPOWER"
     repository: "https://github.com/rwl/PYPOWER"
     description: "Port of MATPOWER to Python"
+    license: BSD-3-Clause
 
   - name: "PyPSA"
     repository: "https://github.com/PyPSA/PyPSA"
@@ -182,7 +187,6 @@ Simulation:
     homepage: https://helics.org/
     repository: https://github.com/GMLC-TDC/HELICS
 
-
 "State Estimation":
   - name: "pyVolt"
     repository: "https://git.rwth-aachen.de/acs/public/automation/se/pyvolt"
@@ -204,10 +208,11 @@ Other:
     repository: "https://github.com/energyRt/energyRt/"
     description: "R package to develop Reference Energy System (RES) models and analyze energy-technologies"
 
-  - name: "pandapower"
-    repository: "https://github.com/e2nIEE/pandapower"
-    description: "Convenient Power System Modelling and Analysis based on PYPOWER and pandas"
-    homepage: "https://www.pandapower.org/"
+  - name: pandapower
+    description: An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation based on PYPOWER and pandas.
+    repository: https://github.com/e2nIEE/pandapower
+    homepage: http://www.pandapower.org/
+    license: BSD-3-Clause
 
   - name: "State Space Model for Distribution Grids (SSMD)"
     repository: "https://git.rwth-aachen.de/acs/public/simulation/ssmd"
@@ -241,15 +246,11 @@ Other:
     repository: "https://github.com/sogno-platform/pintura"
     description: "Standalone graphical power system topology editor and library to be used in web applications"
 
-  - name: pandapower
-    description: An easy to use open source tool for power system modeling, analysis and optimization with a high degree of automation.
-    repository: https://github.com/e2nIEE/pandapower
-    homepage: http://www.pandapower.org/
-
   - name: OpenEMS
     description: OpenEMS - the Open Source Energy Management System - is a modular platform for energy management applications.
     repository: https://github.com/OpenEMS/openems
     homepage: https://openems.io/
+    license: "EPL-2.0 / APGLv3"
 
   - name: volkszaehler.org
     description: volkszaehler.org is a free do-it-yourself smart meter. The user retains complete control over the electricity, water & gas costs incurred.
