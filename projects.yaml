@@ -256,3 +256,14 @@ Other:
     description: volkszaehler.org is a free do-it-yourself smart meter. The user retains complete control over the electricity, water & gas costs incurred.
     repository: https://github.com/volkszaehler/volkszaehler.org
     homepage: https://volkszaehler.org/
+
+  - name: "PV generator"
+    repository: "Matlab tool to generate realist power profiles of PV panels in presence of different wheater conditions, latitude and time of the day"
+    description: "https://git.rwth-aachen.de/acs/public/simulation/pvgenerator"
+    homepage: "https://fein-aachen.org/projects/PVgenerator/"
+    license: "GPLv3"
+
+  - name: "CIMverter"
+    repository: "https://github.com/cim-iec/CIMverter"
+    description: "Tool for converting power grid topology files based on CIM-XML-RDF into Modelica system models"
+    license: "GPLv3"
