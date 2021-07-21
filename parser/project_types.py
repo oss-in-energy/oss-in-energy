@@ -15,6 +15,9 @@ class Activity:
         else:
             return str(self.date)
 
+    def as_str(self) -> str:
+        return str(self.date)
+
 @dataclass
 class License:
     name: str
@@ -26,3 +29,6 @@ class License:
             return retval
         else:
             return str(self.name)
+
+    def as_str(self) -> str:
+        return str(self.name)
