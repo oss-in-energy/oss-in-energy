@@ -8,6 +8,8 @@ from urllib.parse import urlparse
 
 import validators
 from dateutil.parser import parse
+from datetime import date
+
 
 from github_api import GithubRepo
 from gitlab_api import GitlabRepo
@@ -102,14 +104,18 @@ class OpenSourceProject:
         license_usr = get_dict_value(d, "license")
         if license_usr is None and repo_api is not None:
             license_name = repo_api.get_license()
-        else:
-            assert isinstance(license_usr, str)
+        elif isinstance(license_usr, str):
             license_name = License(license_usr, None)
+        else:
+            license_name = None
 
         first_release_str = get_dict_value(d, "first_release")
         first_release = None
         if first_release_str is not None:
-            first_release = Activity(parse(first_release_str).date(), None)
+            if isinstance(first_release_str, date):
+                first_release = Activity(first_release_str, None)
+            else:
+                first_release = Activity(parse(first_release_str).date(), None)
         elif repo_api is not None:
             first_release = repo_api.get_first_release()
 
