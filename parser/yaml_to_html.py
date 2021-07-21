@@ -1,12 +1,18 @@
 #!/usr/bin/env python
 
+import argparse
+
 import yaml
 
 from oss_project import OpenSourceProjectList
 
-with open("../projects.yaml", "r") as stream:
+parser = argparse.ArgumentParser()
+parser.add_argument("yamlfilename", help="the yamlfile with the projcets")
+args = parser.parse_args()
+
+with open(args.yamlfilename, "r") as yamlfile:
     try:
-        yaml_content = yaml.safe_load(stream)
+        yaml_content = yaml.safe_load(yamlfile)
     except yaml.YAMLError as exc:
         print("Error: Invalid yaml file:")
         print(exc)

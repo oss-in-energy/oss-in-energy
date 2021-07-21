@@ -13,4 +13,4 @@ You feel like something is missing here? Please help improving this list by PR o
 
 You can download a csv version of the table [here](table.csv)
 
-{{< include-html "parser/table.html" >}}
+{{< include-html "table.html" >}}
