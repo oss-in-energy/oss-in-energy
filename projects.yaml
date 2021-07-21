@@ -1,3 +1,117 @@
+Control:
+  - name: "CoVee"
+    repository: "https://github.com/sogno-platform/covee"
+    description: "Python package implementing several voltage control methods"
+
+Forecasting:
+  - name: "ProLoaF"
+    repository: "https://github.com/sogno-platform/proloaf"
+    description: "A probabilistic load forecasting project"
+
+
+Interfaces:
+  - name: "CoSIF"
+    repository: "https://git.rwth-aachen.de/acs/public/simulation/cosif"
+    description: "A collection of co-simulation Interface Algorithms (IA) for (geographically) distributed real-time simulation"
+    homepage: "https://www.fein-aachen.org/en/projects/cosif/"
+    license: "GPLv3"
+
+Modeling:
+  - name: "OSeMOSYS"
+    repository: "https://github.com/OSeMOSYS/OSeMOSYS"
+    description: "Full-fledged systems optimization model generator for long-term energy planning"
+    homepage: "http://www.osemosys.org/"
+
+  - name: "Calliope"
+    repository: "https://github.com/calliope-project/calliope"
+    description: "Multi-scale energy system modelling framework"
+    homepage: "https://www.callio.pe/"
+
+  # - name: "oemof"
+  #   repository: "https://github.com/oemof"
+  #   description: "Modular open source framework to model energy supply systems"
+  #   homepage: "https://oemof.org/"
+
+  - name: "FINE" # TODO: Could also be categorized as "Optimization"?
+    repository: "https://github.com/FZJ-IEK3-VSA/FINE"
+    description: "The FINE python package provides a framework for modeling, optimizing and assessing energy systems"
+
+  - name: "Balmorel" #TODO: Are models part of "Modeling"?
+    repository: "http://balmorel.com/index.php/downloadmodel"
+    description: "Partial equilibrium model for analysing the electricity and combined heat and power sectors in an international perspective"
+    license: "ISC"
+
+  - name: CIMdraw
+    description: CIMDraw is a WebApp to view IEC CIM (CGMES) files
+    repository: https://github.com/danielePala/CIMDraw
+    homepage: https://danielepala.github.io/CIMDraw/
+
+  - name: CIMTool
+    description: Creates interfaces and applications using the IEC Common Information Model (CIM).
+    repository: https://github.com/arnolddevos/CIMTool
+    homepage: https://wiki.cimtool.org/
+
+Optimization:
+  - name: "ficus"
+    repository: "https://github.com/tum-ewk/ficus"
+    description: "(Mixed integer) linear programming optimization model for capacity expansion planning and unit commitment for local energy systems"
+
+  - name: "Temoa" # TODO: Could also be categorized as "Modeling"?
+    repository: "https://github.com/TemoaProject/temoa"
+    description: "Tools for Energy Model Optimization and Analysis"
+    homepage: "https://temoacloud.com/"
+
+  - name: "urbs" # TODO: Could also be categorized as "Modeling"?
+    repository: "https://github.com/tum-ens/urbs"
+    description: "Linear optimisation model for distributed energy systems"
+
+  - name: "DIETER"
+    repository: "https://www.diw.de/de/diw_01.c.599753.de/modelle.html"
+    description: "Dispatch and Investment Evaluation Tool with Endogenous Renewables"
+    homepage: "https://www.diw.de/de/diw_01.c.599753.de/modelle.html"
+    license: "MIT" # TODO: Input data licensed under CC BY-SA 4.0 - How to handle multiple licenses?
+    languages:
+      - "GAMS"
+
+  - name: "OnSSET"
+    repository: "https://github.com/KTH-dESA/OnSSET-2016"
+    description: "GIS based optimization tool to support electrification planning and decision making or the achievement of energy access goals in currently unserved locations"
+    homepage: "http://www.onsset.org/"
+
+  - name: "dhmin" #TODO: Are models part of "Modeling"?
+    repository: "https://github.com/tum-ens/dhmin"
+    description: "Mathematical optimisation model for district energy distrubtion networks"
+
+  - name: "minpower"
+    repository: "https://github.com/adamgreenhall/minpower"
+    description: "Toolkit for students and researchers in power systems"
+    license: "MIT"
+    homepage: "http://adamgreenhall.github.io/minpower/index.html"
+
+  - name: "MOST"
+    repository: "https://github.com/MATPOWER/most"
+    description: "MATPOWER Optimal Scheduling Tool, for steady-state power systems scheduling problems"
+
+  - name: "NEMO"
+    repository: "https://github.com/bje-/NEMO"
+    description: "National Electricity Market Optimiser"
+
+  - name: "rivus"
+    repository: "https://github.com/tum-ens/rivus"
+    description: "Mixed integer linear optimisation model for energy infrastructure networks"
+
+  - name: "Switch"
+    repository: "https://github.com/switch-model/switch"
+    description: "Modern Platform for Planning High-Renewable Power Systems"
+    homepage: "http://switch-model.org/"
+
+Platform:
+  - name: "OpenEMS"
+    repository: "https://github.com/OpenEMS/openems/"
+    description: "Modular platform for energy management applications"
+    homepage: "https://openems.io/"
+    license: "EPL-2.0 / APGLv3"
+
 Simulation:
   - name: "DistAIX"
     homepage: "https://www.fein-aachen.org/projects/distaix/"
@@ -68,40 +182,18 @@ Simulation:
     homepage: https://helics.org/
     repository: https://github.com/GMLC-TDC/HELICS
 
-Modeling:
-  - name: "OSeMOSYS"
-    repository: "https://github.com/OSeMOSYS/OSeMOSYS"
-    description: "Full-fledged systems optimization model generator for long-term energy planning"
-    homepage: "http://www.osemosys.org/"
 
-  - name: "Calliope"
-    repository: "https://github.com/calliope-project/calliope"
-    description: "Multi-scale energy system modelling framework"
-    homepage: "https://www.callio.pe/"
+"State Estimation":
+  - name: "pyVolt"
+    repository: "https://git.rwth-aachen.de/acs/public/automation/se/pyvolt"
+    description: "State estimation and powerflow algorithms"
+    license: "MPL 2.0"
 
-  # - name: "oemof"
-  #   repository: "https://github.com/oemof"
-  #   description: "Modular open source framework to model energy supply systems"
-  #   homepage: "https://oemof.org/"
-
-  - name: "FINE" # TODO: Could also be categorized as "Optimization"?
-    repository: "https://github.com/FZJ-IEK3-VSA/FINE"
-    description: "The FINE python package provides a framework for modeling, optimizing and assessing energy systems"
-
-  - name: "Balmorel" #TODO: Are models part of "Modeling"?
-    repository: "http://balmorel.com/index.php/downloadmodel"
-    description: "Partial equilibrium model for analysing the electricity and combined heat and power sectors in an international perspective"
-    license: "ISC"
-
-  - name: CIMdraw
-    description: CIMDraw is a WebApp to view IEC CIM (CGMES) files
-    repository: https://github.com/danielePala/CIMDraw
-    homepage: https://danielepala.github.io/CIMDraw/
-
-  - name: CIMTool
-    description: Creates interfaces and applications using the IEC Common Information Model (CIM).
-    repository: https://github.com/arnolddevos/CIMTool
-    homepage: https://wiki.cimtool.org/
+  - name: "Distribution System State Estimator (DSSE)"
+    repository: "https://git.rwth-aachen.de/acs/public/automation/dsse"
+    description: "Matlab code of a voltage and current state estimator for distribution systems"
+    homepage: "https://www.fein-aachen.org/projects/dsse/"
+    license: "GPLv3"
 
 Other:
   - name: "Dispa-SET"
@@ -122,97 +214,6 @@ Other:
     description: "Matlab code to generate the state-space matrices of electrical distribution grids"
     license: "GPLv3" # Coud not be parsed automatically?
 
-Optimization:
-  - name: "ficus"
-    repository: "https://github.com/tum-ewk/ficus"
-    description: "(Mixed integer) linear programming optimization model for capacity expansion planning and unit commitment for local energy systems"
-
-  - name: "Temoa" # TODO: Could also be categorized as "Modeling"?
-    repository: "https://github.com/TemoaProject/temoa"
-    description: "Tools for Energy Model Optimization and Analysis"
-    homepage: "https://temoacloud.com/"
-
-  - name: "urbs" # TODO: Could also be categorized as "Modeling"?
-    repository: "https://github.com/tum-ens/urbs"
-    description: "Linear optimisation model for distributed energy systems"
-
-  - name: "DIETER"
-    repository: "https://www.diw.de/de/diw_01.c.599753.de/modelle.html"
-    description: "Dispatch and Investment Evaluation Tool with Endogenous Renewables"
-    homepage: "https://www.diw.de/de/diw_01.c.599753.de/modelle.html"
-    license: "MIT" # TODO: Input data licensed under CC BY-SA 4.0 - How to handle multiple licenses?
-    languages:
-      - "GAMS"
-
-  - name: "OnSSET"
-    repository: "https://github.com/KTH-dESA/OnSSET-2016"
-    description: "GIS based optimization tool to support electrification planning and decision making or the achievement of energy access goals in currently unserved locations"
-    homepage: "http://www.onsset.org/"
-
-  - name: "dhmin" #TODO: Are models part of "Modeling"?
-    repository: "https://github.com/tum-ens/dhmin"
-    description: "Mathematical optimisation model for district energy distrubtion networks"
-
-  - name: "minpower"
-    repository: "https://github.com/adamgreenhall/minpower"
-    description: "Toolkit for students and researchers in power systems"
-    license: "MIT"
-    homepage: "http://adamgreenhall.github.io/minpower/index.html"
-
-  - name: "MOST"
-    repository: "https://github.com/MATPOWER/most"
-    description: "MATPOWER Optimal Scheduling Tool, for steady-state power systems scheduling problems"
-
-  - name: "NEMO"
-    repository: "https://github.com/bje-/NEMO"
-    description: "National Electricity Market Optimiser"
-
-  - name: "rivus"
-    repository: "https://github.com/tum-ens/rivus"
-    description: "Mixed integer linear optimisation model for energy infrastructure networks"
-
-  - name: "Switch"
-    repository: "https://github.com/switch-model/switch"
-    description: "Modern Platform for Planning High-Renewable Power Systems"
-    homepage: "http://switch-model.org/"
-
-Platform:
-  - name: "OpenEMS"
-    repository: "https://github.com/OpenEMS/openems/"
-    description: "Modular platform for energy management applications"
-    homepage: "https://openems.io/"
-    license: "EPL-2.0 / APGLv3"
-
-Interfaces:
-  - name: "CoSIF"
-    repository: "https://git.rwth-aachen.de/acs/public/simulation/cosif"
-    description: "A collection of co-simulation Interface Algorithms (IA) for (geographically) distributed real-time simulation"
-    homepage: "https://www.fein-aachen.org/en/projects/cosif/"
-    license: "GPLv3"
-
-Forecasting:
-  - name: "ProLoaF"
-    repository: "https://github.com/sogno-platform/proloaf"
-    description: "A probabilistic load forecasting project"
-
-State_estimation:
-  - name: "pyVolt"
-    repository: "https://git.rwth-aachen.de/acs/public/automation/se/pyvolt"
-    description: "State estimation and powerflow algorithms"
-    license: "MPL 2.0"
-
-  - name: "Distribution System State Estimator (DSSE)"
-    repository: "https://git.rwth-aachen.de/acs/public/automation/dsse"
-    description: "Matlab code of a voltage and current state estimator for distribution systems"
-    homepage: "https://www.fein-aachen.org/projects/dsse/"
-    license: "GPLv3"
-
-Control:
-  - name: "CoVee"
-    repository: "https://github.com/sogno-platform/covee"
-    description: "Python package implementing several voltage control methods"
-
-Other:
   - name: "pyCity_base"
     repository: "https://github.com/RWTH-EBC/pyCity"
     description: "Python package for data handling and scenario generation of city districts"
