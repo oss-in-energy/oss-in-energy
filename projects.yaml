@@ -271,3 +271,18 @@ Other:
   - name: "IEC61850bean"
     repository: "https://github.com/beanit/iec61850bean"
     description: "Java IEC 61850 MMS stack for clients and servers"
+
+  - name: "libiec61850"
+    repository: "https://github.com/mz-automation/libiec61850"
+    description: "Open-source library for the IEC 61850 protocols"
+    homepage: "http://libiec61850.com/libiec61850/"
+
+  - name: "lib60870"
+    repository: "https://github.com/mz-automation/lib60870"
+    description: "Implementation of the IEC 60870-5-101/104 protocol"
+    homepage: "https://www.mz-automation.de/communication-protocols/iec-60870-5-101-104-c-source-code-library/"
+
+  - name: "lib60870.NET"
+    repository: "https://github.com/mz-automation/lib60870.NET"
+    description: "Implementation of the IEC 60870-5-101/104 protocols in C#"
+    homepage: "https://www.mz-automation.de/communication-protocols/iec-60870-5-101-104-c-net-source-code-library/"
