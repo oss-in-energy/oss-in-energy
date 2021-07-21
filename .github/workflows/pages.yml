@@ -22,6 +22,8 @@ jobs:
       - name: generate page
         run: |
          hugo -D
+      - name: Copy csv into website resources folder
+        run: cp parser/table.csv public
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
