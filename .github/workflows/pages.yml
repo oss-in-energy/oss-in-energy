@@ -28,6 +28,7 @@ jobs:
         with:
           name: public
           path: public
+        if: ${{ github.ref == 'refs/heads/master' }}
 
   publish_website:
     runs-on: ubuntu-latest
