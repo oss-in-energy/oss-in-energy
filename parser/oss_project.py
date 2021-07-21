@@ -79,7 +79,10 @@ class OpenSourceProject:
         repo_api: Any = None
         parsed_repo_url = urlparse(repository)
         if parsed_repo_url.netloc == "github.com":
-            repo_api = GithubRepo(repository)
+            try:
+                repo_api = GithubRepo(repository)
+            except ValueError:
+                repo_api = None
         else:
             try:
                 repo_api = GitlabRepo(repository)

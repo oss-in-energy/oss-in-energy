@@ -22,9 +22,11 @@ class GithubRepo:
         parsed_url = urlparse(url)
         assert parsed_url.netloc == "github.com"
 
-        repo_path = parsed_url.path.rstrip('/').lstrip("/")
+        repo_path = parsed_url.path.rstrip("/").lstrip("/")
         if len(repo_path.split("/")) == 1:
-            return None
+            raise ValueError(
+                "Cannot use API calls for Github organizations at the moment"
+            )
         assert len(repo_path.split("/")) == 2
         repo = github_api.get_repo(repo_path)
         self.url = url
