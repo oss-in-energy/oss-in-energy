@@ -15,3 +15,6 @@ with open("../projects.yaml", "r") as stream:
     projects = OpenSourceProjectList.from_yaml(yaml_content)
     with open("table.html", "w") as htmlfile:
         projects.write_as_html(htmlfile)
+
+    with open("table.csv", "w") as csvfile:
+        projects.write_as_csv(csvfile)

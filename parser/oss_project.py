@@ -194,6 +194,30 @@ class OpenSourceProject:
             (safe_fmt(self.first_release, Activity.as_html), "text-align: center"),
         ]
 
+    def to_csv_list(self) -> List[str]:
+        def safe_fmt(o: Optional[Any], formatter: Callable[[Any], str]):
+            if o:
+                return formatter(o)
+            else:
+                return ""
+
+        def fmt_list(l: List[str]) -> str:
+            return ", ".join(l)
+
+        return [
+            self.name,
+            self.repository,
+            self.description,
+            safe_fmt(self.homepage, str),
+            safe_fmt(self.license_name, License.as_str),
+            safe_fmt(self.languages, fmt_list),
+            safe_fmt(self.tags, fmt_list),
+            #  self.category,
+            safe_fmt(self.last_update, Activity.as_str),
+            safe_fmt(self.latest_release, Activity.as_str),
+            safe_fmt(self.first_release, Activity.as_str),
+        ]
+
 
 @dataclass
 class OpenSourceProjectList:
@@ -247,3 +271,16 @@ class OpenSourceProjectList:
                 htmlfile.write(f"</tr>\n")
             htmlfile.write("</tbody>\n")
             htmlfile.write("</table>\n")
+
+    def write_as_csv(self, csvfile: TextIO):
+        csvfile.write("Category;")
+        for (header, html_fmt) in OpenSourceProject.list_headers():
+            csvfile.write(f"{header};")
+        csvfile.write("\n")
+
+        for category in self.projects.keys():
+            for proj in sorted(self.projects[category], key=lambda proj: proj.name):
+                csvfile.write(f"{category};")
+                for entry in proj.to_csv_list():
+                    csvfile.write(f"{entry};")
+                csvfile.write(f"\n")
