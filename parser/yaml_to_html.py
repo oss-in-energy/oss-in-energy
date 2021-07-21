@@ -13,6 +13,9 @@ with open("../projects.yaml", "r") as stream:
         exit(-1)
 
     projects = OpenSourceProjectList.from_yaml(yaml_content)
+
+    projects.check_for_duplicates()
+
     with open("table.html", "w") as htmlfile:
         projects.write_as_html(htmlfile)
 

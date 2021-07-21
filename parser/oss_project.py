@@ -253,6 +253,17 @@ class OpenSourceProjectList:
 
         return OpenSourceProjectList(projects)
 
+    def check_for_duplicates(self):
+        projs = []
+        for proj_list in self.projects.values():
+            for proj in proj_list:
+                projs.append(proj.name)
+        if len(projs) != len(set(projs)):
+            for proj in set(projs):
+                projs.remove(proj)
+            raise RuntimeError(f'Found duplicate projects: {", ".join(projs)}')
+
+
     def write_as_html(self, htmlfile: TextIO):
         for category in self.custom_sorted_categories():
             htmlfile.write(f"<h2>{category}</h2>\n")
