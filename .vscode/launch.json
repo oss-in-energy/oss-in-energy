@@ -5,9 +5,10 @@
             "name": "Python: run parser",
             "type": "python",
             "request": "launch",
-            "program": "yaml_to_html.py",
+            "program": "parser/yaml_to_html.py",
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}/parser",
+            "cwd": "${workspaceFolder}",
+            "args": ["projects.yaml"],
             "justMyCode": true
         },
         {

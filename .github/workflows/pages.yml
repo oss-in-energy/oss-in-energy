@@ -14,8 +14,7 @@ jobs:
         run: pip install -r requirements.txt
         working-directory: parser
       - name: create table
-        run: python yaml_to_html.py
-        working-directory: parser
+        run: python parser/yaml_to_html.py projects.yaml
         env:
           GITHUB_API_KEY: ${{ secrets.GH_API_KEY }}
       - run: sudo apt-get install -y hugo
@@ -23,7 +22,7 @@ jobs:
         run: |
          hugo -D
       - name: Copy csv into website resources folder
-        run: cp parser/table.csv public
+        run: cp table.csv public
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
