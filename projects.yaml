@@ -55,6 +55,17 @@ Modeling:
     homepage: https://wiki.cimtool.org/
     license: LGPL-2.1
 
+  - name: "emlab-generation"
+    repository: "https://github.com/EMLab/emlab-generation"
+    description: "Suite of Agent-Based Models of power generation, dealing with energy and carbon policy questions"
+
+  - name: "GCAM"
+    repository: "https://github.com/JGCRI/gcam-core"
+    description: "The Global Change Analysis Model"
+    homepage: "http://jgcri.github.io/gcam-doc/"
+    license: "ECL-2.0"
+
+
 Optimization:
   - name: "ficus"
     repository: "https://github.com/tum-ewk/ficus"
@@ -285,3 +296,14 @@ Other:
     repository: "https://github.com/mz-automation/lib60870.NET"
     description: "Implementation of the IEC 60870-5-101/104 protocols in C#"
     homepage: "https://www.mz-automation.de/communication-protocols/iec-60870-5-101-104-c-net-source-code-library/"
+
+  - name: "PowerGAMA"
+    repository: "https://bitbucket.org/harald_g_svendsen/powergama/src"
+    description: "Python package for hour-by-hour optimal power flow analysis of interconnected power systems with variable energy sources and storage systems"
+    license: "MIT"
+    languages:
+      - "Python"
+
+  - name: "SIREN"
+    repository: "https://github.com/ozsolarwind/siren"
+    description: "SEN's Interactive Renewable Energy Network tool"
