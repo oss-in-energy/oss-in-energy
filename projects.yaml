@@ -33,9 +33,6 @@ Modeling:
     repository: "https://github.com/oemof/oemof"
     description: "Modular open source framework to model energy supply systems"
     homepage: "https://oemof.org/"
-    # license: "MIT, BSD"
-    # languages:
-    #   - Python
 
   - name: "FINE" # TODO: Could also be categorized as "Optimization"?
     repository: "https://github.com/FZJ-IEK3-VSA/FINE"
