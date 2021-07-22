@@ -260,8 +260,8 @@ Other:
     homepage: https://volkszaehler.org/
 
   - name: "PV generator"
-    repository: "Matlab tool to generate realist power profiles of PV panels in presence of different wheater conditions, latitude and time of the day"
-    description: "https://git.rwth-aachen.de/acs/public/simulation/pvgenerator"
+    description: "Matlab tool to generate realist power profiles of PV panels in presence of different wheater conditions, latitude and time of the day"
+    repository: "https://git.rwth-aachen.de/acs/public/simulation/pvgenerator"
     homepage: "https://fein-aachen.org/projects/PVgenerator/"
     license: "GPLv3"
 
