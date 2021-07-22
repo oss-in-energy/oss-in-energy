@@ -342,3 +342,28 @@ Other:
     repository: "https://github.com/openeemeter/eemeter"
     description: "Python package for implementing and developing standard methods for calculating normalized metered energy consumption and avoided energy use."
     homepage: "http://eemeter.openee.io/"
+
+  - name: "GSF"
+    repository: "https://github.com/GridProtectionAlliance/gsf"
+    description: "Extensive collection of .NET code with a focus on tools and protocol parser that are useful for the electric power industry"
+    homepage: "https://www.gridprotectionalliance.org/technology.asp#GSF"
+
+  - name: "openPDC"
+    repository: "https://github.com/GridProtectionAlliance/openPDC"
+    description: "Phasor Data Concentrator software system designed to process streaming time-series data in real-time"
+
+  - name: "openHistorian"
+    repository: "https://github.com/GridProtectionAlliance/openHistorian"
+    description: "Back office system designed to efficiently integrate and archive process control data, e.g., SCADA, synchrophasor, digital fault recorder or any other time-series data used to support process operations"
+
+  - name: "openXDA"
+    repository: "https://github.com/GridProtectionAlliance/openXDA"
+    description: "Platform for processing event and trending records from disturbance monitoring equipment such as digital fault recorders (DFRs), relays, power quality meters, and other power system IEDs"
+
+  - name: "openMIC"
+    repository: "https://github.com/GridProtectionAlliance/openMIC"
+    description: "Meter Information Collection System"
+
+  - name: "SIEGate"
+    repository: "https://github.com/GridProtectionAlliance/SIEGate"
+    description: "Secure Information Exchange Gateway"
