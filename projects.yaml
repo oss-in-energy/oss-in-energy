@@ -15,6 +15,11 @@ Interfaces:
     homepage: "https://www.fein-aachen.org/en/projects/cosif/"
     license: "GPLv3"
 
+  - name: "OpenLEADR"
+    repository: "https://github.com/OpenLEADR/openleadr-python"
+    description: "Python 3 module that provides a convenient interface to OpenADR systems"
+    homepage: "https://openleadr.org/docs"
+
 Modeling:
   - name: "OSeMOSYS"
     repository: "https://github.com/OSeMOSYS/OSeMOSYS"
@@ -122,6 +127,26 @@ Optimization:
     description: "Modern Platform for Planning High-Renewable Power Systems"
     homepage: "http://switch-model.org/"
     license: Apache-2.0
+
+  - name: "steELMOD"
+    repository: "https://github.com/frkunz/stELMOD"
+    description: "Stochastic optimization model to analyze the impact of uncertain wind generation on the dayahead and intraday electricity markets as well as network congestion management"
+
+Platform:
+  - name: "GXF"
+    repository: "https://github.com/OSGP/open-smart-grid-platform"
+    description: "Software platform that enables hardware monitoring and control in the public space"
+    homepage: "https://www.lfenergy.org/projects/gxf/"
+
+  - name: "OperatorFabric"
+    repository: "https://github.com/opfab/operatorfabric-core"
+    description: "Modular, extensible, industrial-strength, and field-tested platform for systems operators"
+    homepage: "https://opfab.github.io/"
+
+  - name: "RIAPS"
+    repository: "https://github.com/RIAPS/riaps-core"
+    description: "Software platform for building distributed real-time embedded applications using a component-oriented approach"
+    homepage: "https://riaps.isis.vanderbilt.edu/"
 
 Simulation:
   - name: "DistAIX"
@@ -307,3 +332,13 @@ Other:
   - name: "SIREN"
     repository: "https://github.com/ozsolarwind/siren"
     description: "SEN's Interactive Renewable Energy Network tool"
+
+  - name: "PowSyBl"
+    repository: "https://github.com/powsybl/powsybl-core"
+    description: "Framework to build power system oriented software"
+    homepage: "https://www.powsybl.org/"
+
+  - name: "OpenEEmeter"
+    repository: "https://github.com/openeemeter/eemeter"
+    description: "Python package for implementing and developing standard methods for calculating normalized metered energy consumption and avoided energy use."
+    homepage: "http://eemeter.openee.io/"
