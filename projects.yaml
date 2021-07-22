@@ -143,10 +143,12 @@ Simulation:
     description: "Renewable Energy Pathways Simulation System"
 
   - name: "OpenDSS"
-    repository: "https://sourceforge.net/projects/electricdss/files/"
+    repository: "https://sourceforge.net/projects/electricdss"
     description: "EPRI Distribution System Simulator"
     homepage: "https://smartgrid.epri.com/SimulationTool.aspx"
-    license: "EPL-2.0"
+    license: BSD-3-Clause
+    languages:
+      - Delphi
 
   - name: "DPsim"
     repository: "https://github.com/sogno-platform/dpsim"
