@@ -70,6 +70,15 @@ Modeling:
     homepage: "http://jgcri.github.io/gcam-doc/"
     license: "ECL-2.0"
 
+Monitoring:
+  - name: "NILMTK"
+    repository: "https://github.com/nilmtk/nilmtk"
+    description: "Non-Intrusive Load Monitoring Toolkit"
+
+  - name: "WattDepot"
+    repository: "https://github.com/wattdepot/wattdepot"
+    description: "Enterprise-level collection, storage, and analysis of energy and related data"
+    homepage: "http://wattdepot.org/"
 
 Optimization:
   - name: "ficus"
