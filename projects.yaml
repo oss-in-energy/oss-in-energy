@@ -89,6 +89,10 @@ Monitoring:
     description: "Enterprise-level collection, storage, and analysis of energy and related data"
     homepage: "http://wattdepot.org/"
 
+  - name: "Scaphandre"
+    repository: "https://github.com/hubblo-org/scaphandre"
+    description: "Metrology agent dedicated to electrical power consumption metrics"
+
 Optimization:
   - name: "ficus"
     repository: "https://github.com/tum-ewk/ficus"
@@ -200,6 +204,11 @@ Simulation:
     description: "Python for Power System Analysis"
     homepage: "https://pypsa.org/"
 
+  - name: "PyPSA-Eur"
+    repository: "https://github.com/PyPSA/pypsa-eur"
+    description: "Open Optimisation Model of the European Transmission System"
+    homepage: "https://pypsa-eur.readthedocs.io/"
+
   - name: "renpass"
     repository: "https://github.com/fraukewiese/renpass"
     description: "Renewable Energy Pathways Simulation System"
@@ -265,6 +274,10 @@ Simulation:
     repository: "https://github.com/Breakthrough-Energy/PowerSimData"
     description: "Simulation framework to carry out power flow study in the U.S. electrical grid"
     homepage: "https://breakthrough-energy.github.io/docs/"
+
+  - name: "GSEE"
+    repository: "https://github.com/renewables-ninja/gsee"
+    description: "Global Solar Energy Estimator: Solar energy simulation library designed for rapid calculations and ease of use"
 
 "State Estimation":
   - name: "pyVolt"
@@ -420,3 +433,20 @@ Other:
   - name: "CircuitComponentRounding.jl"
     repository: "https://github.com/KronosTheLate/CircuitComponentRounding.jl"
     description: "Functions to round given values to the nearest standardized value for circuit components"
+
+  - name: "energy-py"
+    repository: "https://github.com/ADGEfficiency/energy-py"
+    description: "Framework for running reinforcement learning experiments on energy environments, focused on electric battery storage."
+
+  - name: "power-wheel-card"
+    repository: "https://github.com/gurbyz/power-wheel-card"
+    description: "Intuitive way to represent the power and energy that your home is consuming or producing"
+
+  - name: "Atlite"
+    repository: "https://github.com/PyPSA/atlite"
+    description: "Light-weight version of Aarhus RE Atlas for converting weather data to power systems data"
+    license: "GPL-3.0-or-later"
+
+  - name: "GLAES"
+    repository: "https://github.com/FZJ-IEK3-VSA/glaes"
+    description: "Geospatial Land Availability for Energy Systems"
