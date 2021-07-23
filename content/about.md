@@ -11,3 +11,4 @@ menu:
 # About
 
 About what?
+Icons taken from  https://fontawesome.com/ under CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
