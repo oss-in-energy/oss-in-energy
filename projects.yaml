@@ -70,6 +70,11 @@ Modeling:
     homepage: "http://jgcri.github.io/gcam-doc/"
     license: "ECL-2.0"
 
+  - name: "PowerSimulations.jl"
+    description: "Julia for optimization simulation and modeling of PowerSystems"
+    repository: "https://github.com/NREL-SIIP/PowerSimulations.jl"
+    homepage: "https://www.nrel.gov/analysis/siip.html"
+
 Monitoring:
   - name: "NILMTK"
     repository: "https://github.com/nilmtk/nilmtk"
@@ -140,6 +145,17 @@ Optimization:
   - name: "steELMOD"
     repository: "https://github.com/frkunz/stELMOD"
     description: "Stochastic optimization model to analyze the impact of uncertain wind generation on the dayahead and intraday electricity markets as well as network congestion management"
+
+  - name: "PowerModels.jl"
+    repository: "https://github.com/lanl-ansi/PowerModels.jl"
+    description: "Julia/JuMP package for Steady-State Power Network Optimization"
+    license: "BSD-3-Clause"
+    homepage: "https://lanl-ansi.github.io/PowerModels.jl/stable/"
+
+  - name: "REopt Lite API"
+    repository: "https://github.com/NREL/REopt_Lite_API"
+    description: "Recommends an optimal mix of renewable energy, conventional generation, and energy storage technologies to meet cost savings and energy performance goals, including the hourly optimal operation of the system"
+    homepage: "https://developer.nrel.gov/docs/energy-optimization/reopt-v1/"
 
 Platform:
   - name: "GXF"
@@ -230,6 +246,16 @@ Simulation:
     description: Hierarchical Engine for Large-scale Infrastructure Co-Simulation
     homepage: https://helics.org/
     repository: https://github.com/GMLC-TDC/HELICS
+
+  - name: "PowerSimulationsDynamics.jl"
+    repository: "https://github.com/NREL-SIIP/PowerSimulationsDynamics.jl"
+    description: "Julia package to run Dynamic Power System simulations"
+    homepage: "https://www.nrel.gov/analysis/siip.html"
+
+  - name: "REISE.jl"
+    repository: "https://github.com/Breakthrough-Energy/REISE.jl"
+    description: "Renewable Energy Integration Simulation Engine"
+    homepage: "https://breakthrough-energy.github.io/docs/"
 
 "State Estimation":
   - name: "pyVolt"
@@ -376,3 +402,12 @@ Other:
   - name: "SIEGate"
     repository: "https://github.com/GridProtectionAlliance/SIEGate"
     description: "Secure Information Exchange Gateway"
+
+  - name: "PowerSystems.jl"
+    repository: "https://github.com/NREL-SIIP/PowerSystems.jl"
+    description: "Data model using Julia structures to enable power systems analysis and modeling"
+    homepage: "https://www.nrel.gov/analysis/siip.html"
+
+  - name: "CircuitComponentRounding.jl"
+    repository: "https://github.com/KronosTheLate/CircuitComponentRounding.jl"
+    description: "Functions to round given values to the nearest standardized value for circuit components"
