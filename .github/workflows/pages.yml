@@ -23,32 +23,15 @@ jobs:
       - run: sudo apt-get install -y hugo
       - name: generate page
         run: |
-         hugo -D
+          hugo -D
       - name: Copy csv into website resources folder
         run: cp table.csv public
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: public
-          path: public
         if: ${{ github.ref == 'refs/heads/master' }}
-
-  publish_website:
-    runs-on: ubuntu-latest
-    needs: build
-    if: ${{ github.ref == 'refs/heads/master' }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-      - name: Download website artifact
-        uses: actions/download-artifact@v2
       - name: Deploy to GitHub Pages
-        # if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
           build_dir: public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ github.ref == 'refs/heads/master' }}
