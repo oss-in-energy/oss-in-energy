@@ -1,6 +1,9 @@
 name: website
 
-on: push
+on:
+  push:
+  schedule:
+    - cron: "0 6 * * *" # daily at 6:00
 
 jobs:
   build:
