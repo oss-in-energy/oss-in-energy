@@ -8,7 +8,9 @@ menu:
 
 ---
 
-# About
+Open-Source in Energy is a project from the [Chair of Automation of Complex Power Systems (ACS)](https://www.acs.eonerc.rwth-aachen.de) at [RWTH-Aachen.de](https://www.rwth-aachen.de)
 
-About what?
+
 Icons taken from  https://fontawesome.com/ under CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+
+Website is created using [Hugo](https://gohugo.io/) and the [hyde theme](https://github.com/spf13/hyde)
