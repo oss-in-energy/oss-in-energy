@@ -8,7 +8,7 @@ You can find the complete rendered table [-> here <-](https://oss-in-energy.gith
 
 **Contributions to the catalog are most welcome!**
 
-The process is quite simple: Fork this project, add the project to the [projects.yaml](projects.yaml) and create a pull request for this repository.
+The process is quite simple: Fork this project, add the new oss project to the [projects.yaml](projects.yaml) and create a pull request for this repository.
 An entry can look as follows:
 
 ```yaml
