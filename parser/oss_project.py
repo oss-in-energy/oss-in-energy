@@ -13,7 +13,7 @@ from datetime import date
 
 from github_api import GithubRepo
 from gitlab_api import GitlabRepo
-from project_types import Activity, License
+from utils import Activity, License
 
 # TODO: ist this a good approach?
 # class Category(Enum):
