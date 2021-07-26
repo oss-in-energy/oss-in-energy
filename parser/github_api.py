@@ -9,7 +9,7 @@ from github.Tag import Tag
 from github.GithubException import UnknownObjectException
 from github.Repository import Repository
 
-from project_types import Activity, License, is_release_tag, sort_tags_alphanumeric
+from utils import Activity, License, is_release_tag, sort_tags_alphanumeric
 
 api_key = environ.get("GITHUB_API_KEY")
 github_api = Github() if api_key is None else Github(api_key)

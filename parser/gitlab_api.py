@@ -8,7 +8,7 @@ from gitlab import Gitlab
 from gitlab.exceptions import GitlabGetError, GitlabHttpError
 from gitlab.v4.objects.projects import Project
 
-from project_types import Activity, License, is_release_tag, sort_tags_alphanumeric
+from utils import Activity, License, is_release_tag, sort_tags_alphanumeric
 
 
 class GitlabRepo:
