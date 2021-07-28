@@ -301,7 +301,7 @@ class OpenSourceProjectList:
             for proj in self.projects_sorted(category):
                 csvfile.write(f"{category};")
                 for entry in proj.to_csv_list():
-                    csvfile.write(f"{entry};")
+                    csvfile.write(f"{entry.replace(';',',')};")
                 csvfile.write(f"\n")
 
     def projects_sorted(self, category: str) -> List[OpenSourceProject]:
