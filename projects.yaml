@@ -181,6 +181,11 @@ Platform:
     description: "Software platform for building distributed real-time embedded applications using a component-oriented approach"
     homepage: "https://riaps.isis.vanderbilt.edu/"
 
+  - name: "SEAPATH"
+    repository: "https://github.com/seapath/repo-manifest"
+    description: "Aims at developing a “reference design” and “industrial grade” open source real-time platform that can run virtualized automation and protection application"
+    homepage: "https://www.lfenergy.org/projects/SEAPATH/"
+
 Simulation:
   - name: "DistAIX"
     homepage: "https://www.fein-aachen.org/projects/distaix/"
@@ -450,3 +455,13 @@ Other:
   - name: "GLAES"
     repository: "https://github.com/FZJ-IEK3-VSA/glaes"
     description: "Geospatial Land Availability for Energy Systems"
+
+  - name: "CoMPAS"
+    repository: "https://github.com/com-pas/compas-core"
+    description: "Open source software components related to IEC 61850 model implementation (profile management) and configuration"
+    homepage: "https://www.lfenergy.org/projects/compas/"
+
+  - name: "Hyphae"
+    repository: "https://github.com/hyphae/APIS"
+    description: "By providing an Autonomous Power Interchange System (APIS), Hyphae automatically and efficiently distributes locally-produced renewable energy over a DC grid"
+    homepage: "https://www.lfenergy.org/projects/hyphae/"
