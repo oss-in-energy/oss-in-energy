@@ -7,6 +7,16 @@ Forecasting:
   - name: "ProLoaF"
     repository: "https://github.com/sogno-platform/proloaf"
     description: "A probabilistic load forecasting project"
+    license: "Apache-2.0"
+    languages:
+      - "Python"
+    
+  - name: "ProbCast"
+    repostiory: "https://github.com/jbrowell/ProbCast"
+    description: "An R Package for Flexible Probabilistic Forecasting"
+    license: "GPLv3"
+    languages:
+      - "R"
 
 Interfaces:
   - name: "CoSIF"
