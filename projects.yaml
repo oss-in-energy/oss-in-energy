@@ -13,6 +13,11 @@ Forecasting:
     description: "An R Package for Flexible Probabilistic Forecasting"
     license: "GNU General Public License v3.0"
 
+  - name: "Openstf"
+    repository: "https://github.com/alliander-opensource/openstf"
+    description: "Python package which is used to make short term forecasts for the energy sector"
+    homepage: "https://alliander-opensource.github.io/openstf/#"
+
 Interfaces:
   - name: "CoSIF"
     repository: "https://git.rwth-aachen.de/acs/public/simulation/cosif"
