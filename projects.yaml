@@ -294,6 +294,11 @@ Simulation:
     repository: "https://github.com/renewables-ninja/gsee"
     description: "Global Solar Energy Estimator: Solar energy simulation library designed for rapid calculations and ease of use"
 
+  - name: "TEASER"
+    repository: "https://github.com/RWTH-EBC/TEASER"
+    description: "Tool for Energy Analysis and Simulation for Efficient Retrofit"
+    license: "MIT License"
+
 "State Estimation":
   - name: "pyVolt"
     repository: "https://git.rwth-aachen.de/acs/public/automation/se/pyvolt"
