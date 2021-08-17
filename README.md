@@ -19,7 +19,7 @@ An entry can look as follows:
 
     # The following information can often be fetched automatically, if not they can also be provided manually
     first_release: "2021-05-04"
-    license: "MIT"
+    license: "GNU General Public License v3.0 / MIT License"
     languages:
       - "Rust"
       - "C++"
