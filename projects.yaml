@@ -101,6 +101,10 @@ Modeling:
     homepage: "https://www.power.scigrid.de/"
     first_release: 2015-06-12 # Tag v0.1 in git repository
 
+  - name: "EnergyPATHWAYS"
+    description: "Energy and carbon planning tool for use in evaluating long-term, economy-wide greenhouse gas mitigation scenarios"
+    repository: "https://github.com/energyPATHWAYS/energyPATHWAYS"
+
 Monitoring:
   - name: "NILMTK"
     repository: "https://github.com/nilmtk/nilmtk"
@@ -207,6 +211,11 @@ Platform:
     repository: "https://github.com/seapath/repo-manifest"
     description: "Aims at developing a “reference design” and “industrial grade” open source real-time platform that can run virtualized automation and protection application"
     homepage: "https://www.lfenergy.org/projects/SEAPATH/"
+
+  - name: "EF-Pi"
+    repository: "https://github.com/flexiblepower/fpai-core"
+    description: "Platform & interface providing a runtime environment that makes it possible to quickly design and implement new energy services and smart appliances"
+    homepage: "https://flexiblepower.github.io/technology/efpi/"
 
 Simulation:
   - name: "DistAIX"
@@ -497,3 +506,8 @@ Other:
     repository: "https://github.com/powertac/powertac-server"
     description: "Power TAC is a competitive simulation designed to support the study of retail electric power markets, especially as they relate to managing distributed renewable power sources"
     homepage: "https://powertac.org/"
+
+  - name: "PowerMatcher"
+    repository: "https://github.com/flexiblepower/powermatcher"
+    description: "Smart grid coordination mechanism"
+    homepage: "https://flexiblepower.github.io/technology/powermatcher/"
