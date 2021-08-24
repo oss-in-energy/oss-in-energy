@@ -94,6 +94,13 @@ Modeling:
     description: "An open-source, interactive tool for energy modelling which allows you to build and explore scenarios for the entire energy system of your country, region or city."
     homepage: "https://energytransitionmodel.com/"
 
+  - name: "SciGRID"
+    repository: "http://git.scigrid.de"
+    description: "Open source model of the German and European electricity transmission networks."
+    license: "Apache License 2.0"
+    homepage: "https://www.power.scigrid.de/"
+    first_release: 2015-06-12 # Tag v0.1 in git repository
+
 Monitoring:
   - name: "NILMTK"
     repository: "https://github.com/nilmtk/nilmtk"
