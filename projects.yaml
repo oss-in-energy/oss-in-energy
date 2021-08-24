@@ -492,3 +492,8 @@ Other:
     repository: "https://github.com/hyphae/APIS"
     description: "By providing an Autonomous Power Interchange System (APIS), Hyphae automatically and efficiently distributes locally-produced renewable energy over a DC grid"
     homepage: "https://www.lfenergy.org/projects/hyphae/"
+
+  - name: "PowerTAC"
+    repository: "https://github.com/powertac/powertac-server"
+    description: "Power TAC is a competitive simulation designed to support the study of retail electric power markets, especially as they relate to managing distributed renewable power sources"
+    homepage: "https://powertac.org/"
