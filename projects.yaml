@@ -89,6 +89,11 @@ Modeling:
     repository: "https://github.com/Breakthrough-Energy/plug"
     description: "PortabLe infrastUrcture for Grid modelling"
 
+  - name: "Energy Transition Model (ETM)"
+    repository: "https://github.com/quintel/etmodel"
+    description: "An open-source, interactive tool for energy modelling which allows you to build and explore scenarios for the entire energy system of your country, region or city."
+    homepage: "https://energytransitionmodel.com/"
+
 Monitoring:
   - name: "NILMTK"
     repository: "https://github.com/nilmtk/nilmtk"
