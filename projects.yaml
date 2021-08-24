@@ -100,6 +100,8 @@ Modeling:
     license: "Apache License 2.0"
     homepage: "https://www.power.scigrid.de/"
     first_release: 2015-06-12 # Tag v0.1 in git repository
+    languages:
+      - "Python"
 
   - name: "EnergyPATHWAYS"
     description: "Energy and carbon planning tool for use in evaluating long-term, economy-wide greenhouse gas mitigation scenarios"
