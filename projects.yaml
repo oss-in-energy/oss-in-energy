@@ -73,6 +73,7 @@ Modeling:
   - name: "emlab-generation"
     repository: "https://github.com/EMLab/emlab-generation"
     description: "Suite of Agent-Based Models of power generation, dealing with energy and carbon policy questions"
+    license: "Apache License 2.0"
 
   - name: "GCAM"
     repository: "https://github.com/JGCRI/gcam-core"
@@ -163,6 +164,7 @@ Optimization:
   - name: "MOST"
     repository: "https://github.com/MATPOWER/most"
     description: "MATPOWER Optimal Scheduling Tool, for steady-state power systems scheduling problems"
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "NEMO"
     repository: "https://github.com/bje-/NEMO"
@@ -208,6 +210,7 @@ Platform:
     repository: "https://github.com/RIAPS/riaps-core"
     description: "Software platform for building distributed real-time embedded applications using a component-oriented approach"
     homepage: "https://riaps.isis.vanderbilt.edu/"
+    license: "Apache License 2.0"
 
   - name: "SEAPATH"
     repository: "https://github.com/seapath/repo-manifest"
@@ -230,7 +233,7 @@ Simulation:
     repository: "https://github.com/MATPOWER/matpower"
     description: "Steady state power flow simulation and optimization for MATLAB and Octave"
     homepage: "https://matpower.org/"
-    license: "BSD 3-Clause \"New\" or \"Revised\" License / Other"
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "PYPOWER"
     repository: "https://github.com/rwl/PYPOWER"
@@ -241,11 +244,13 @@ Simulation:
     repository: "https://github.com/PyPSA/PyPSA"
     description: "Python for Power System Analysis"
     homepage: "https://pypsa.org/"
+    license: "GNU General Public License v3.0 or later"
 
   - name: "PyPSA-Eur"
     repository: "https://github.com/PyPSA/pypsa-eur"
     description: "Open Optimisation Model of the European Transmission System"
     homepage: "https://pypsa-eur.readthedocs.io/"
+    license: "GNU General Public License v3.0 or later"
 
   - name: "renpass"
     repository: "https://github.com/fraukewiese/renpass"
