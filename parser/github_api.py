@@ -5,9 +5,10 @@ from urllib.parse import urlparse
 
 from dateutil.parser import parse
 from github import Github
-from github.Tag import Tag
 from github.GithubException import UnknownObjectException
+from github.GitRelease import GitRelease
 from github.Repository import Repository
+from github.Tag import Tag
 
 from utils import Activity, License, is_release_tag, sort_tags_alphanumeric
 
@@ -22,6 +23,8 @@ print(
 class GithubRepo:
     url: str
     repo: Repository
+    taglist = Optional[List[Tuple[datetime, Tag]]]
+    releases = Optional[List[GitRelease]]
 
     def __init__(self, url: str):
         parsed_url = urlparse(url)
@@ -36,45 +39,85 @@ class GithubRepo:
         repo = github_api.get_repo(repo_path)
         self.url = url
         self.repo = repo
+        self.create_sorted_taglist()
+        try:
+            self.releases = self.repo.get_releases()
+        except IndexError:
+            self.releases = None
 
-    def get_tag_nr(self, nr: int) -> Tag:
+    def create_sorted_taglist(self):
+        # This is a workaround, as the last_modified property in the taglist is buggy. See https://github.com/PyGithub/PyGithub/issues/1642
         tags = list(self.repo.get_tags())
-        release_tags = sort_tags_alphanumeric(
-            filter(is_release_tag, tags),
-        )
-        tag = tags[nr]
-        return tag
-
-    def get_tag_activity(self, nr: int) -> Activity:
-        tag = self.get_tag_nr(nr)
-        # I have no clue, why you can't use tag.commit.last_modified here, but it delivers wrong values
-        commit = self.repo.get_commit(tag.commit.sha)
-        assert isinstance(commit.last_modified, str)
-        date = parse(commit.last_modified).date()
-        url = f"{self.repo.html_url}/releases/tag/{tag.name}"
-        return Activity(date, url)
+        if len(tags) > 8:
+            # To save API calls, we only use the first and last tags by alphanumeric string
+            alpha_tags = sort_tags_alphanumeric(filter(is_release_tag, tags))
+            tags = alpha_tags[0:3] + alpha_tags[-3:]
+        date_by_commit_list = [(parse(t.commit.stats.last_modified), t) for t in tags]
+        self.taglist = sorted(date_by_commit_list, key=lambda dt: dt[0])
 
     def get_latest_release(self) -> Optional[Activity]:
+        latest_tag = None
+        latest_tag_activity = None
         try:
-            latest_release = self.repo.get_releases()[0]
-            return Activity(latest_release.created_at.date(), latest_release.html_url)
+            latest_tag = self.taglist[-1]
+            url = f"{self.repo.html_url}/releases/tag/{latest_tag[1].name}"
+            latest_tag_activity = Activity(latest_tag[0].date(), url)
         except IndexError:
-            # sometimes stuff is only available as tag in the API
-            try:
-                return self.get_tag_activity(0)
-            except IndexError:
-                return None
+            pass
+
+        latest_release = None
+        latest_release_activity = None
+        try:
+            latest_release = self.releases[0]
+            latest_release_activity = Activity(
+                latest_release.created_at.date(), latest_release.html_url
+            )
+        except IndexError:
+            pass
+
+        if latest_release is not None and latest_tag is not None:
+            if latest_release.created_at > latest_tag[0].replace(tzinfo=None):
+                return latest_release_activity
+            else:
+                return latest_tag_activity
+        elif latest_release is not None and latest_tag is None:
+            return latest_release_activity
+        elif latest_release is None and latest_tag is not None:
+            return latest_tag_activity
+        else:
+            return None
 
     def get_first_release(self) -> Optional[Activity]:
+        first_tag = None
+        first_tag_activity = None
         try:
-            first_release = self.repo.get_releases()[0]
-            return Activity(first_release.created_at.date(), first_release.html_url)
+            first_tag = self.taglist[0]
+            url = f"{self.repo.html_url}/releases/tag/{first_tag[1].name}"
+            first_tag_activity = Activity(first_tag[0].date(), url)
         except IndexError:
-            # sometimes stuff is only available as tag in the API
-            try:
-                return self.get_tag_activity(-1)
-            except IndexError:
-                return None
+            pass
+
+        first_release = None
+        first_release_activity = None
+        try:
+            first_release = self.releases[0]
+            first_release_activity = Activity(
+                first_release.created_at.date(), first_release.html_url
+            )
+        except IndexError:
+            pass
+
+        if first_release is not None and first_tag is not None:
+            if first_release.created_at < first_tag[0].replace(tzinfo=None):
+                return first_release_activity
+            else:
+                return first_tag_activity
+        elif first_release is not None and first_tag is None:
+            return first_release_activity
+        elif first_release is None and first_tag is not None:
+            return first_tag_activity
+        else:
+            return None
 
     def get_license(self) -> Optional[License]:
         try:
