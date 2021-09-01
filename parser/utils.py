@@ -6,10 +6,10 @@ from typing import Optional
 
 def sort_tags_alphanumeric( l ):
     convert = lambda text: int(text) if text.isdigit() else text
-    alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', key.name)]
+    alphanum_key = lambda key: [convert(c) for c in re.split('([0-9]+)', reg.findall(key.name)[0])]
     return sorted(l, key = alphanum_key)
 
-reg = re.compile("v? ?\d+.\d+(?:.\d+)?") # simple regex to match version strings like "v1.3.4 or v 4.0 or 1.2.3"
+reg = re.compile("[vV]?\.? ?(\d+.\d+(?:.\d+)?)") # simple regex to match version strings like "v1.3.4 or v 4.0 or 1.2.3"
 
 def is_release_tag(tag):
     return reg.match(tag.name)
