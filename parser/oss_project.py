@@ -239,7 +239,7 @@ class OpenSourceProjectList:
             for proj in yaml_content[category]:
                 raw_project_list.append((category, proj))
 
-        with ThreadPoolExecutor() as executor:
+        with ThreadPoolExecutor(max_workers=4) as executor:
             proj_list = executor.map(
                 lambda cat_proj: (
                     cat_proj[0],
