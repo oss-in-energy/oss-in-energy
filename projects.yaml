@@ -1,8 +1,3 @@
-Control:
-  - name: "CoVee"
-    repository: "https://github.com/sogno-platform/covee"
-    description: "Python package implementing several voltage control methods"
-
 Forecasting:
   - name: "ProLoaF"
     repository: "https://github.com/sogno-platform/proloaf"
@@ -79,6 +74,7 @@ Modeling:
     description: "The Global Change Analysis Model"
     homepage: "http://jgcri.github.io/gcam-doc/"
     license: "Eclipse Public License 2.0"
+    first_release: 2003-07 # Publication of "MiniCAM"
 
   - name: "PowerSimulations.jl"
     description: "Julia for optimization simulation and modeling of PowerSystems"
@@ -269,6 +265,7 @@ Simulation:
     repository: https://gitlab.com/mosaik/mosaik
     homepage: https://mosaik.offis.de/
     license: "GNU Lesser General Public License v2.1"
+    first_release: 2014-03-27 # https://mosaik.offis.de/2014/03/27/mosaik-is-open-source/
 
   - name: VILLASweb
     description: VILLASweb is a Javascript/React-based web frontend to manage simulators, simulations and models. It provides an interface to monitor and interact with simulations in real-time.
@@ -513,3 +510,7 @@ Other:
     repository: "https://github.com/flexiblepower/powermatcher"
     description: "Smart grid coordination mechanism"
     homepage: "https://flexiblepower.github.io/technology/powermatcher/"
+
+  - name: "CoVee"
+    repository: "https://github.com/sogno-platform/covee"
+    description: "Python package implementing several voltage control methods"
