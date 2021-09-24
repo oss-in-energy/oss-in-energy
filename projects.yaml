@@ -414,11 +414,6 @@ Other:
     homepage: https://openems.io/
     license: "Eclipse Public License 2.0 / GNU Affero General Public License v3.0"
 
-  - name: volkszaehler.org
-    description: volkszaehler.org is a free do-it-yourself smart meter. The user retains complete control over the electricity, water & gas costs incurred.
-    repository: https://github.com/volkszaehler/volkszaehler.org
-    homepage: https://volkszaehler.org/
-
   - name: "PV generator"
     description: "Matlab tool to generate realist power profiles of PV panels in presence of different wheater conditions, latitude and time of the day"
     repository: "https://git.rwth-aachen.de/acs/public/simulation/pvgenerator"
