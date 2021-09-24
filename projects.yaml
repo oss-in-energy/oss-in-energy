@@ -13,6 +13,40 @@ Forecasting:
     description: "Python package which is used to make short term forecasts for the energy sector"
     homepage: "https://alliander-opensource.github.io/openstf/#"
 
+Libraries:
+  - name: "libcimpp"
+    repository: "https://github.com/sogno-platform/libcimpp"
+    description: "Deserialiser library for C++ objects from XML/RDF documents based on CIM standards"
+
+  - name: "libiec61850"
+    repository: "https://github.com/mz-automation/libiec61850"
+    description: "Open-source library for the IEC 61850 protocols"
+    homepage: "http://libiec61850.com/libiec61850/"
+
+  - name: "lib60870"
+    repository: "https://github.com/mz-automation/lib60870"
+    description: "Implementation of the IEC 60870-5-101/104 protocol"
+    homepage: "https://www.mz-automation.de/communication-protocols/iec-60870-5-101-104-c-source-code-library/"
+
+  - name: "lib60870.NET"
+    repository: "https://github.com/mz-automation/lib60870.NET"
+    description: "Implementation of the IEC 60870-5-101/104 protocols in C#"
+    homepage: "https://www.mz-automation.de/communication-protocols/iec-60870-5-101-104-c-net-source-code-library/"
+
+  - name: "PowerSystems.jl"
+    repository: "https://github.com/NREL-SIIP/PowerSystems.jl"
+    description: "Data model using Julia structures to enable power systems analysis and modeling"
+    homepage: "https://www.nrel.gov/analysis/siip.html"
+
+  - name: "PowSyBl"
+    repository: "https://github.com/powsybl/powsybl-core"
+    description: "Framework to build power system oriented software"
+    homepage: "https://www.powsybl.org/"
+
+  - name: "IEC61850bean"
+    repository: "https://github.com/beanit/iec61850bean"
+    description: "Java IEC 61850 MMS stack for clients and servers"
+
 Interfaces:
   - name: "CoSIF"
     repository: "https://git.rwth-aachen.de/acs/public/simulation/cosif"
@@ -370,10 +404,6 @@ Other:
     description: "Import / export CIM IEC-61970 files in the XML/RDF format"
     license: "Mozilla Public License 2.0"
 
-  - name: "libcimpp"
-    repository: "https://github.com/sogno-platform/libcimpp"
-    description: "Deserialiser library for C++ objects from XML/RDF documents based on CIM standards"
-
   - name: "Pintura"
     repository: "https://github.com/sogno-platform/pintura"
     description: "Standalone graphical power system topology editor and library to be used in web applications"
@@ -400,25 +430,6 @@ Other:
     description: "Tool for converting power grid topology files based on CIM-XML-RDF into Modelica system models"
     license: "GNU General Public License v3.0"
 
-  - name: "IEC61850bean"
-    repository: "https://github.com/beanit/iec61850bean"
-    description: "Java IEC 61850 MMS stack for clients and servers"
-
-  - name: "libiec61850"
-    repository: "https://github.com/mz-automation/libiec61850"
-    description: "Open-source library for the IEC 61850 protocols"
-    homepage: "http://libiec61850.com/libiec61850/"
-
-  - name: "lib60870"
-    repository: "https://github.com/mz-automation/lib60870"
-    description: "Implementation of the IEC 60870-5-101/104 protocol"
-    homepage: "https://www.mz-automation.de/communication-protocols/iec-60870-5-101-104-c-source-code-library/"
-
-  - name: "lib60870.NET"
-    repository: "https://github.com/mz-automation/lib60870.NET"
-    description: "Implementation of the IEC 60870-5-101/104 protocols in C#"
-    homepage: "https://www.mz-automation.de/communication-protocols/iec-60870-5-101-104-c-net-source-code-library/"
-
   - name: "PowerGAMA"
     repository: "https://bitbucket.org/harald_g_svendsen/powergama/src"
     description: "Python package for hour-by-hour optimal power flow analysis of interconnected power systems with variable energy sources and storage systems"
@@ -429,11 +440,6 @@ Other:
   - name: "SIREN"
     repository: "https://github.com/ozsolarwind/siren"
     description: "SEN's Interactive Renewable Energy Network tool"
-
-  - name: "PowSyBl"
-    repository: "https://github.com/powsybl/powsybl-core"
-    description: "Framework to build power system oriented software"
-    homepage: "https://www.powsybl.org/"
 
   - name: "OpenEEmeter"
     repository: "https://github.com/openeemeter/eemeter"
@@ -464,11 +470,6 @@ Other:
   - name: "SIEGate"
     repository: "https://github.com/GridProtectionAlliance/SIEGate"
     description: "Secure Information Exchange Gateway"
-
-  - name: "PowerSystems.jl"
-    repository: "https://github.com/NREL-SIIP/PowerSystems.jl"
-    description: "Data model using Julia structures to enable power systems analysis and modeling"
-    homepage: "https://www.nrel.gov/analysis/siip.html"
 
   - name: "CircuitComponentRounding.jl"
     repository: "https://github.com/KronosTheLate/CircuitComponentRounding.jl"
