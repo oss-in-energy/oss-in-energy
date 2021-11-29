@@ -10,9 +10,8 @@ _Last Update: {{< last_update >}}_
 
 The following is a collection of tools and software for the energy sector.
 
-You feel like something is missing here? Please help improving this list by PR on github!
-
-You can download a csv version of the table [here {{< fontawesome file-csv >}}](table.csv)
+- You feel like something is missing here? Please help improving this list by PR on github!
+- You can download a csv version of the table [here {{< fontawesome file-csv >}}](table.csv)
 
 {{< license-cc >}}
 
