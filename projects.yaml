@@ -178,7 +178,7 @@ Optimization:
     homepage: "http://switch-model.org/"
     license: "Apache License 2.0"
 
-  - name: "steELMOD"
+  - name: "stELMOD"
     repository: "https://github.com/frkunz/stELMOD"
     description: "Stochastic optimization model to analyze the impact of uncertain wind generation on the dayahead and intraday electricity markets as well as network congestion management"
 
