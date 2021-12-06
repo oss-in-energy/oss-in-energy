@@ -47,11 +47,13 @@ class GithubRepo:
 
     def create_sorted_taglist(self):
         # This is a workaround, as the last_modified property in the taglist is buggy. See https://github.com/PyGithub/PyGithub/issues/1642
-        tags = list(self.repo.get_tags())
+        tags = self.repo.get_tags().get_page(0)
+        if len(tags) >= 30:
+            tags += self.repo.get_tags().get_page(-1)
         if len(tags) > 8:
             # To save API calls, we only use the first and last tags by alphanumeric string
             alpha_tags = sort_tags_alphanumeric(filter(is_release_tag, tags))
-            tags = alpha_tags[0:3] + alpha_tags[-3:]
+            tags = alpha_tags[0:2] + alpha_tags[-2:]
         date_by_commit_list = [(parse(t.commit.stats.last_modified), t) for t in tags]
         self.taglist = sorted(date_by_commit_list, key=lambda dt: dt[0])
 
