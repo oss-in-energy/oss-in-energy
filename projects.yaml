@@ -619,10 +619,6 @@ Other:
     repository: "https://github.com/openclimatefix/predict_pv_yield"
     description: "Use machine learning to map satellite imagery of clouds to solar PV yield."
 
-  - name: "solar-panel-detection"
-    repository: "https://github.com/alan-turing-institute/solar-panel-detection"
-    description: "Using a combination of AI (machine vision), open data and short-term forecasting, the project aims to determine the amount of solar electricity being put into the UK grid at a given time (i.e., \"right now\", or \"nowcasting\")"
-
   - name: "solarpy"
     repository: "https://github.com/aqreed/solarpy"
     description: "This package aims to provide a reliable solar radiation model, mainly based on the work of Duffie, J.A., and Beckman, W. A., 1974,\"Solar energy thermal processes\"."
@@ -675,13 +671,10 @@ Other:
     repository: "https://github.com/ladybug-tools/honeybee"
     description: "A Python library to create, run and visualize the results of daylight (RADIANCE) and energy analysis (EnergyPlus/OpenStudio)."
 
-  - name: "Open Solar Project"
-    repository: "https://github.com/opensolarproject/OSPController"
-    description: "ESP32 Smart Solar Charger."
-
   - name: "MPPT-Solar-Charger"
     repository: "https://github.com/danjulio/MPPT-Solar-Charger"
     description: "Supporting documentation and software for the MPPT Solar Charger."
+    license: "GNU Lesser General Public License v3.0"
 
   - name: "Tonatiuh"
     repository: "https://github.com/iat-cener/tonatiuh"
@@ -750,6 +743,7 @@ Other:
   - name: "QBlade"
     repository: "http://www.q-blade.org/#welcome"
     description: "Provides a hands-on design and simulation capabilities for HAWT and VAWT rotor design and shows all the fundamental relationships of design concepts and turbine performance in an easy and intuitive way."
+    license: "GNU General Public License v2.0"
 
   - name: "OpenOA"
     repository: "https://github.com/NREL/OpenOA"
@@ -766,10 +760,12 @@ Other:
   - name: "windtools"
     repository: "https://github.com/FZJ-IEK3-VSA/windtools"
     description: "The Wind Energy Generation Tools provides useful tools to assist in wind energy simulations."
+    license: "MIT License"
 
   - name: "PyWake"
     repository: "https://gitlab.windenergy.dtu.dk/TOPFARM/PyWake"
     description: "An AEP calculator for wind farms implemented in Python including a collection of wake models."
+    license: "MIT License"
 
   - name: "WISDEM"
     repository: "https://github.com/WISDEM/WISDEM"
@@ -786,14 +782,17 @@ Other:
   - name: "TopFarm2"
     repository: "https://gitlab.windenergy.dtu.dk/TOPFARM/TopFarm2"
     description: "A Python package developed by DTU Wind Energy to help with wind-farm optimizations."
+    license: "MIT License"
 
   - name: "BasicDTUController"
     repository: "https://gitlab.windenergy.dtu.dk/OpenLAC/BasicDTUController"
     description: "The scope of this project is to provide an open source, open access controller that can be used by the wind energy community as a reference."
+    license: "GNU General Public License v3.0"
 
   - name: "WindEnergyToolbox"
     repository: "https://gitlab.windenergy.dtu.dk/toolbox/WindEnergyToolbox"
     description: "A collection of Python scripts that facilitate working with (potentially a lot) of HAWC2,HAWCStab2, FAST or other text input based simulation tools."
+    license: "GNU General Public License v3.0 or later"
 
   - name: "windfarmGA"
     repository: "https://github.com/YsoSirius/windfarmGA"
@@ -814,6 +813,7 @@ Other:
   - name: "pyconturb"
     repository: "https://gitlab.windenergy.dtu.dk/pyconturb/pyconturb"
     description: "Constrained Stochastic Turbulence for Wind Energy Applications."
+    license: "MIT License"
 
   - name: "ORBIT"
     repository: "https://github.com/WISDEM/ORBIT"
@@ -902,6 +902,7 @@ Other:
   - name: "OpenGeoSys 6"
     repository: "https://gitlab.opengeosys.org/ogs/ogs"
     description: "A scientific open source project for the development of numerical methods for the simulation of thermo-hydro-mechanical-chemical processes in porous and fractured media."
+    license: "GNU General Public License v3.0"
 
   - name: "FEHM"
     repository: "https://github.com/lanl/FEHM"
@@ -923,21 +924,9 @@ Other:
     repository: "https://github.com/SmartTensors/GeoThermalCloud.jl"
     description: "A repository containing all the data and codes required to demonstrate applications of machine learning methods for geothermal exploration."
 
-  - name: "biogas"
-    repository: "https://github.com/sashahafner/biogas"
-    description: "Tools for biogas research in R: process biogas data and predict biogas production."
-
   - name: "biosteam"
     repository: "https://github.com/BioSTEAMDevelopmentGroup/biosteam"
     description: "The Biorefinery Simulation and Techno-Economic Analysis Modules."
-
-  - name: "Multiscale_Ulva"
-    repository: "https://github.com/alexliberzonlab/Multiscale_Ulva"
-    description: "A multi-reactor, algae farm, simulation base function that will be solved in time."
-
-  - name: "foxBMS"
-    repository: "https://github.com/foxBMS/foxbms"
-    description: "A free, open and flexible development environment to design battery management systems. It is the first modular open source BMS development platform."
 
   - name: "impedance.py"
     repository: "https://github.com/ECSHackWeek/impedance.py"
@@ -955,10 +944,6 @@ Other:
     repository: "https://github.com/jepegit/cellpy"
     description: "Extract and tweak data from electro-chemical tests of battery cells."
 
-  - name: "prediction-of-battery-cycle"
-    repository: "https://github.com/rdbraatz/data-driven-prediction-of-battery-cycle-life-before-capacity-degradation"
-    description: "Data driven prediction of battery cycle life before capacity degradation."
-
   - name: "BatterySense"
     repository: "https://github.com/rlogiacco/BatterySense"
     description: "A simple Arduino library to monitor battery consumption of your battery powered projects, being LiPo, LiIon, NiCd or any other battery type, single or multiple cells: if it can power your Arduino you can monitor it."
@@ -974,10 +959,7 @@ Other:
   - name: "simses"
     repository: "https://gitlab.lrz.de/open-ees-ses/simses"
     description: "Software for techno-economic Simulation of Stationary Energy Storage Systems."
-
-  - name: "CAEBAT OAS"
-    repository: "https://vibe.ornl.gov/#introduction"
-    description: "A flexible, robust, and computationally scalable open-architecture framework that integrates multi-physics and multi- scale battery models."
+    license: "BSD 3-Clause License"
 
   - name: "universal-battery-database"
     repository: "https://github.com/Samuel-Buteau/universal-battery-database"
@@ -986,10 +968,12 @@ Other:
   - name: "open_BEA"
     repository: "https://gitlab.lrz.de/open-ees-ses/openbea"
     description: "Open Battery Models for Electrical Grid Applications."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "lp_opt"
     repository: "https://gitlab.lrz.de/open-ees-ses/lp_opt"
     description: "Linear Programming Optimization Tool for Battery Energy Storage Systems."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "SLIDE"
     repository: "https://github.com/davidhowey/SLIDE"
@@ -999,13 +983,10 @@ Other:
     repository: "https://github.com/batterysim/equiv-circ-model"
     description: "An equivalent circuit model for a battery cell, module, and pack."
 
-  - name: "long-live-the-battery"
-    repository: "https://github.com/dsr-18/long-live-the-battery"
-    description: "Predicting total battery cycle life time with machine learning."
-
   - name: "ISEAFramework"
     repository: "https://git.rwth-aachen.de/isea/framework"
     description: "Allows coupled electrical-thermal simulations of single storage systems (e.g. lithium ion batteries or double layer capacitors) or complete storage system packs."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "Ampere"
     repository: "https://github.com/nealde/Ampere"
@@ -1014,10 +995,6 @@ Other:
   - name: "StorageVET"
     repository: "https://github.com/epri-dev/StorageVET"
     description: "A valuation model for analysis of energy storage technologies and some other energy resources paired with storage."
-
-  - name: "offgridsystems"
-    repository: "https://github.com/offgridsystems/Documents"
-    description: "Data sheet and assembly manual, component data sheets, busbars and files needed to build no-weld wireless BMS DKblock style battery packs."
 
   - name: "3d_milp"
     repository: "https://github.com/ElektrikAkar/3d_milp"
@@ -1030,6 +1007,7 @@ Other:
   - name: "emobpy"
     repository: "https://gitlab.com/diw-evu/emobpy/emobpy"
     description: "An open tool for creating battery-electric vehicle time series from empirical data."
+    license: "MIT License"
 
   - name: "OPEM"
     repository: "https://github.com/ECSIM/opem"
@@ -1058,10 +1036,6 @@ Other:
   - name: "GasModels.jl"
     repository: "https://github.com/lanl-ansi/GasModels.jl"
     description: "A Julia/JuMP Package for Gas Network Optimization."
-
-  - name: "hpxml"
-    repository: "https://github.com/hpxmlwg/hpxml"
-    description: "Home Performance XML is a data transfer standard for the home performance industry."
 
   - name: "HPXML to Home Energy Score Translator"
     repository: "https://github.com/NREL/hescore-hpxml"
@@ -1110,6 +1084,7 @@ Other:
   - name: "AixLib"
     repository: "https://github.com/RWTH-EBC/AixLib"
     description: "A Modelica model library for building performance simulations."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "tespy"
     repository: "https://github.com/oemof/tespy"
@@ -1126,18 +1101,11 @@ Other:
   - name: "Modelica Buildings library"
     repository: "https://github.com/lbl-srg/modelica-buildings"
     description: "A free and open source library with dynamic simulation models for building energy and control systems."
-
-  - name: "StROBe"
-    repository: "https://github.com/open-ideas/StROBe"
-    description: "An open web tool developed at the KU Leuven Building Physics Section to model the pervasive space for residential integrated district energy assessment simulations in the openIDEAS modeling environment."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "NYCBuildingEnergyUse"
     repository: "https://github.com/mdh266/NYCBuildingEnergyUse"
     description: "Predict the emission of greenhouse gases from buildings by looking at their age, and water consumption as well as other energy consumption metrics."
-
-  - name: "Smart-Energy-Monitor"
-    repository: "https://github.com/jonathanrjpereira/Smart-Energy-Monitor"
-    description: "The goal is to accurately predict the monthly electricity bill of the household using minimum hardware and by acquiring electrical data at a single location."
 
   - name: "Hotmaps"
     repository: "https://github.com/HotMaps/Hotmaps-toolbox-service"
@@ -1151,21 +1119,9 @@ Other:
     repository: "https://github.com/lbl-srg/MPCPy"
     description: "The Python-based open source platform for model predictive control in buildings."
 
-  - name: "obc"
-    repository: "https://github.com/lbl-srg/obc"
-    description: "Performance Evaluation, Specification, Deployment and Verification of Building Control Sequences."
-
-  - name: "The Application Domain Extension"
-    repository: "https://github.com/cstb/citygml-energy"
-    description: "Defines a standardized data model based on CityGML format for urban energy analyses, aiming to be a reference exchange data format between different urban modeling tools and expert databases."
-
   - name: "PLANHEAT Tool"
     repository: "https://github.com/Planheat/Planheat-Tool"
     description: "A QGIS plug-in based on an open source code, whose goal is to analyze, plan and simulate low carbon Heating & Cooling scenarios."
-
-  - name: "Energy Signature Analyser"
-    repository: "https://gitlab.com/energyincities/energy-signature-analyser"
-    description: "A toolbox to analyze energy signatures of buildings and compare the signatures of all buildings within an entire building stock."
 
   - name: "BuildingSystems"
     repository: "https://github.com/UdK-VPT/BuildingSystems"
@@ -1174,14 +1130,17 @@ Other:
   - name: "modelica-ibpsa"
     repository: "https://github.com/ibpsa/modelica-ibpsa"
     description: "A Modelica library for building and district energy systems developed within IBPSA Project 1."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "project1"
     repository: "https://github.com/ibpsa/project1"
     description: "Creates open source software that builds the basis of next generation computing tools for the design and operation of building and district energy and control systems."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "teb"
     repository: "https://github.com/TEB-model/teb"
     description: "A library to calculate the urban surface energy balance at neighborhood scale assuming a simplified canyon geometry."
+    license: "CeCILL License 2.1"
 
   - name: "tsib"
     repository: "https://github.com/FZJ-IEK3-VSA/tsib"
@@ -1198,6 +1157,7 @@ Other:
   - name: "BESOS"
     repository: "https://gitlab.com/energyincities/besos"
     description: "A collection of modules for the simulation and optimization of buildings and urban energy systems."
+    license: "GNU General Public License v3.0 or later"
 
   - name: "pythermalcomfort"
     repository: "https://github.com/CenterForTheBuiltEnvironment/pythermalcomfort"
@@ -1295,13 +1255,10 @@ Other:
     repository: "https://github.com/STS-Rosario/carpoolear"
     description: "The first Argentine Facebook app that allows the users of this social network to share car trips with other users."
 
-  - name: "UTD19"
-    repository: "https://utd19.ethz.ch/"
-    description: "Largest multi-city traffic dataset publicly available."
-
   - name: "OpenEVSE"
     repository: "https://github.com/lincomatic/open_evse"
     description: "Firmware for OpenEVSE: Open Source Hardware J1772 Electric Vehicle Supply Equipment."
+    license: "GNU General Public License v3.0"
 
   - name: "OpenEVSE WiFi gateway"
     repository: "https://github.com/OpenEVSE/ESP8266_WiFi_v2.x"
@@ -1379,10 +1336,6 @@ Other:
     repository: "https://github.com/marlinarnz/quetzal_germany"
     description: "A four step transport model for Germany using the quetzal transport modeling suite."
 
-  - name: "OpenMobility"
-    repository: "https://openmobility.eclipse.org/"
-    description: "Driving the Evolution and Broad Adoption of Open Source Mobility Modeling and Simulation Technologies."
-
   - name: "NoiseModelling"
     repository: "https://github.com/Ifsttar/NoiseModelling"
     description: "A free and open source model to compute noise maps."
@@ -1390,10 +1343,6 @@ Other:
   - name: "NoiseCapture"
     repository: "https://github.com/Ifsttar/NoiseCapture"
     description: "Android App dedicated to the measurement of environmental noise."
-
-  - name: "bikedata"
-    repository: "https://github.com/ropensci/bikedata"
-    description: "Aims to enable ready importing of historical trip data from all public bicycle hire systems which provide data. Will be expanded on an ongoing basis as more systems publish open data."
 
   - name: "CyclOSM"
     repository: "https://github.com/cyclosm/cyclosm-cartocss-style"
@@ -1407,10 +1356,6 @@ Other:
     repository: "https://github.com/LBNL-UCB-STI/beam"
     description: "The Framework for Modeling Behavior, Energy, Autonomy, and Mobility in Transportation Systems."
 
-  - name: "WoBike"
-    repository: "https://github.com/ubahnverleih/WoBike"
-    description: "Public transport and multimodal routing apps could benefit from showing nearby bikes from bikesharing services. So here's a list showing the APIs of a few of these platforms."
-
   - name: "multicycles"
     repository: "https://github.com/PierrickP/multicycles"
     description: "Aggregates on one map, more than 100 share vehicles like bikes, scooters, mopeds and cars."
@@ -1422,6 +1367,7 @@ Other:
   - name: "sustainable-mobility-api"
     repository: "https://gitlab.com/mshepherd/sustainable-mobility-api"
     description: "Consists of a Python library and HTTP API for estimating the environmental impact of personal mobility."
+    license: "MIT License"
 
   - name: "ChargyDesktopApp"
     repository: "https://github.com/OpenChargingCloud/ChargyDesktopApp"
@@ -1438,6 +1384,7 @@ Other:
   - name: "openv2g"
     repository: "http://openv2g.sourceforge.net/"
     description: "The objective to start this project is primarily to support the ISO and IEC standardization process to specify the so called \"Vehicle 2 Grid Communication Interface\" (V2G CI) which became the ISO IEC 15118 specification by now."
+    license: "GNU Lesser General Public License v3.0"
 
   - name: "RAMP-mobility"
     repository: "https://github.com/RAMP-project/RAMP-mobility"
@@ -1446,6 +1393,7 @@ Other:
   - name: "PCT"
     repository: "https://github.com/ITSLeeds/pct/"
     description: "The goal is to increase the accessibility and reproducibility of the data produced by the Propensity to Cycle Tool (PCT)."
+    license: "GNU General Public License v3.0"
 
   - name: "goat"
     repository: "https://github.com/goat-community/goat"
@@ -1454,6 +1402,7 @@ Other:
   - name: "gtfs-router"
     repository: "https://github.com/ATFutures/gtfs-router"
     description: "An R package for routing with GTFS (General Transit Feed Specification) data."
+    license: "GNU General Public License v3.0"
 
   - name: "CityFlow"
     repository: "https://github.com/cityflow-project/CityFlow/"
@@ -1495,10 +1444,6 @@ Other:
     repository: "https://github.com/chargeprice/open-ev-data"
     description: "Open Dataset of Electric Vehicle specs."
 
-  - name: "SmartEVSE"
-    repository: "https://github.com/SmartEVSE/smartevse"
-    description: "Smart EVSE Electric Vehicle Charging Station."
-
   - name: "BikeshareClient"
     repository: "https://github.com/andmos/BikeshareClient"
     description: "Dotnet library for integrating with GBFS bikeshare systems."
@@ -1508,7 +1453,7 @@ Other:
     description: "Source code for the paper Growing Urban Bicycle Networks, exploring algorithmically the limitations of urban bicycle network growth."
 
   - name: "A/B Street"
-    repository: "https://github.com/a-b-street"
+    repository: "https://github.com/a-b-street/abstreet"
     description: "A traffic simulation game exploring how small changes to roads affect cyclists, transit users, pedestrians, and drivers."
 
   - name: "enviroCar"
@@ -1518,10 +1463,6 @@ Other:
   - name: "Industry Energy Tool"
     repository: "https://github.com/NREL/Industry-Energy-Tool"
     description: "A calculator developed by NREL for projecting energy efficiency and fuel switching scenarios for the U.S. industrial sector energy use and emissions at the Census Region and county-level."
-
-  - name: "Industry Energy Data Book"
-    repository: "https://github.com/NREL/Industry-energy-data-book"
-    description: "Summarizes the status of, and identifies the key trends in energy use and its underlying economic drivers across the four industrial subsectors: agriculture, construction, manufacturing, and mining."
 
   - name: "CalTRACK"
     repository: "https://github.com/energy-market-methods/caltrack"
@@ -1534,6 +1475,7 @@ Other:
   - name: "H2020 CATALYST"
     repository: "https://gitlab.com/project-catalyst"
     description: "Converting data centres in energy flexibility ecosystems."
+    license: "GNU Lesser General Public License v3.0"
 
   - name: "Energy-Languages"
     repository: "https://github.com/greensoftwarelab/Energy-Languages"
@@ -1555,17 +1497,15 @@ Other:
     repository: "https://github.com/powerapi-ng/powerapi"
     description: "A middleware toolkit for building software-defined power meters."
 
-  - name: "argos"
-    repository: "https://github.com/marmelab/argos"
-    description: "A tool to measure consumption of a given Docker command and see its performance evolution. Argos is able to measure CPU, memory and network usage of Docker containers for a given command. By measuring resource consumption of dockerized E2E tests, Argos allows to compare the consumption of an app between its different versions."
-
   - name: "ecometer"
     repository: "https://gitlab.com/ecoconceptionweb/ecometer"
     description: "Loads websites, compute metrics (from network activity, loaded payloads and the web page), and uses them to assess the website's ecodesign maturity based on a list of best practices."
+    license: "GNU Affero General Public License v3.0"
 
   - name: "patch-node"
     repository: "https://github.com/patch-technology/patch-node"
     description: "The road to global carbon-neutrality will be through programmatic compensation."
+    license: "MIT License"
 
   - name: "co2.js"
     repository: "https://github.com/thegreenwebfoundation/co2.js"
@@ -1598,22 +1538,16 @@ Other:
   - name: "Carbon-API-2.0"
     repository: "https://gitlab.com/wholegrain/carbon-api-2-0"
     description: "Estimating the carbon emissions per page on thousands of sites by looking at the amount of data that they transfer on load."
+    license: "MIT License"
 
   - name: "FEEP"
     repository: "https://invent.kde.org/cschumac/feep"
     description: " Improve the energy efficiency of free and open source software."
+    license: "MIT License"
 
   - name: "LEAF"
     repository: "https://github.com/dos-group/leaf"
     description: "Simulator for modeling energy consumption in cloud, fog, and edge computing environments."
-
-  - name: "Open Energy System Models"
-    repository: "https://en.wikipedia.org/wiki/Open_energy_system_models"
-    description: "Used to explore future energy systems and are often applied to questions involving energy and climate policy."
-
-  - name: "Open Models"
-    repository: "https://wiki.openmod-initiative.org/wiki/Open_Models"
-    description: "This page lists energy models published under open source licenses."
 
   - name: "System Advisor Model"
     repository: "https://github.com/NREL/SAM"
@@ -1654,10 +1588,12 @@ Other:
   - name: "IDEAS"
     repository: "https://github.com/open-ideas/IDEAS"
     description: "A Modelica library allowing simultaneous transient simulation of thermal and electrical systems at both building and feeder level."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "Antares Simulator"
     repository: "https://github.com/AntaresSimulatorTeam/Antares_Simulator"
     description: "An Open Source power system simulator to quantify the adequacy or the economic performance of interconnected energy systems, at short or remote time horizons."
+    license: "GNU General Public License v2.0 or later"
 
   - name: "openENTRANCE"
     repository: "https://github.com/openENTRANCE/nomenclature"
@@ -1682,6 +1618,7 @@ Other:
   - name: "antaresViz"
     repository: "https://github.com/rte-antares-rpackage/antaresViz"
     description: "Visualize the results of Antares, an Open Source power system simulator meant to be used by anybody placing value in quantifying the adequacy or the economic performance of interconnected energy systems, at short or remote time horizons."
+    license: "GNU General Public License v2.0 or later"
 
   - name: "antaresRead"
     repository: "https://github.com/rte-antares-rpackage/antaresRead"
@@ -1698,14 +1635,11 @@ Other:
   - name: "OMEGAlpes"
     repository: "https://gricad-gitlab.univ-grenoble-alpes.fr/omegalpes/omegalpes"
     description: "Aims to be an energy systems modeling tool for linear optimization (LP, MILP)."
+    license: "Apache License 2.0"
 
   - name: "deflex"
     repository: "https://github.com/reegis/deflex"
     description: "Flexible multi-regional energy system model for heat, power and mobility."
-
-  - name: "energy-py-linear"
-    repository: "https://github.com/ADGEfficiency/energy-py-linear"
-    description: "Optimizing energy systems using mixed integer linear programming."
 
   - name: "AnyMOD.jl"
     repository: "https://github.com/leonardgoeke/AnyMOD.jl"
@@ -1714,10 +1648,12 @@ Other:
   - name: "FlexiGIS"
     repository: "https://github.com/FlexiGIS/FlexiGIS"
     description: "Extracts, filters and categorizes the geo-referenced urban energy infrastructure and allocates the required decentralized storage in urban settings."
+    license: "BSD 3-Clause \"New\" or \"Revised\" License"
 
   - name: "EMMA"
     repository: "https://neon.energy/emma/"
     description: "A techno-economic model of the north-west European power market covering France, Benelux, Germany and Poland."
+    license: "Creative Commons Attribution-ShareAlike 3.0"
 
   - name: "reVX"
     repository: "https://github.com/NREL/reVX"
@@ -1782,10 +1718,7 @@ Other:
   - name: "Power System Analysis Toolbox"
     repository: "http://faraday1.ucd.ie/psat.html"
     description: "A Matlab toolbox for electric power system analysis and simulation."
-
-  - name: "USelectricity"
-    repository: "https://github.com/RamiKrispin/USelectricity"
-    description: "Forecast the US demand for electricity."
+    license: "GNU General Public License v3.0"
 
   - name: "reV"
     repository: "https://github.com/NREL/reV"
@@ -1823,14 +1756,6 @@ Other:
     repository: "https://github.com/blue-marble/gridpath"
     description: "A versatile simulation and optimization platform for power-system planning and operations."
 
-  - name: "Peaky Finders"
-    repository: "https://github.com/kbaranko/peaky-finders"
-    description: "A Plotly Dash application with helpful peak load visualizations and a day ahead forecasting model for five different ISOs."
-
-  - name: "Renewcast"
-    repository: "https://github.com/derevirn/renewcast"
-    description: "Forecasting renewable energy generation in EU countries with machine learning algorithms, based on Streamlit and sktime."
-
   - name: "ANDES"
     repository: "https://github.com/cuihantao/andes"
     description: "Power system transient dynamics simulation with symbolic modeling and numerical analysis."
@@ -1844,12 +1769,14 @@ Other:
     description: "A platform to design, deploy, and operate transactive energy systems in electric utility retail environments."
 
   - name: "TIMES-Ireland Model"
-    repository: "https://github.com/MaREI-EPMG"
+    repository: "https://github.com/MaREI-EPMG/times-ireland-model"
     description: "Information on the Irish energy system as it is today and the best available projections for what the future technology and fuel options and demands will be."
+    license: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
 
   - name: "Frictionless Energy data"
     repository: "https://sentinel-energy.github.io/friendly_data/"
     description: "Common medium to facilitate the flow of data between energy and environmental models in a way that can be automated."
+    license: "Apache License 2.0"
 
   - name: "Open Modeling Framework"
     repository: "https://github.com/dpinney/omf"
@@ -1870,6 +1797,7 @@ Other:
   - name: "emonpi"
     repository: "https://github.com/openenergymonitor/emonpi"
     description: "The OpenEnergyMonitor system has the capability to monitor electrical energy use / generation, temperature and humidity."
+    license: "GNU General Public License v3.0 / Creative Commons Attribution-ShareAlike 3.0"
 
   - name: "EmonLib"
     repository: "https://github.com/openenergymonitor/EmonLib"
@@ -1886,6 +1814,7 @@ Other:
   - name: "STM32 Energy Monitoring"
     repository: "https://github.com/openenergymonitor/STM32"
     description: "The following resources are a work in progress guide to using the STM32 platform for energy monitoring, being written as part of development work into the next generation of OpenEnergyMonitor hardware."
+    license: "Multiple"
 
   - name: "SimBench"
     repository: "https://github.com/e2nIEE/simbench"
@@ -1923,10 +1852,6 @@ Other:
     repository: "https://github.com/rl-institut/offgridders"
     description: "Models and optimizes capacity & dispatch of electricity supply systems, off-grid or connected to a (weak) central grid."
 
-  - name: "RTS-GMLC"
-    repository: "https://github.com/GridMod/RTS-GMLC"
-    description: "Reliability Test System of the Grid Modernization Lab Consortium."
-
   - name: "openmodelica-microgrid-gym"
     repository: "https://github.com/upb-lea/openmodelica-microgrid-gym"
     description: "An OpenAI Gym Environment for Microgrids."
@@ -1943,10 +1868,6 @@ Other:
     repository: "https://github.com/SanPen/GridCal"
     description: "Aims to be a complete platform for power systems research and simulation."
 
-  - name: "pyehub"
-    repository: "https://gitlab.com/energyincities/python-ehub"
-    description: "A Python-based, modular and nestable implementation of the Energy Hub model (balancing demand and supply, system capacity sizing and network flows using Mixed-Integer Linear Programming)."
-
   - name: "origin"
     repository: "https://github.com/energywebfoundation/origin"
     description: "A set of toolkits that together provide a system for issuance and management of Energy Attribute Certificates."
@@ -1958,6 +1879,7 @@ Other:
   - name: "Backbone"
     repository: "https://gitlab.vtt.fi/backbone/backbone"
     description: "A generic energy network optimization tool written in GAMS."
+    license: "GNU General Public License v3.0 or later"
 
   - name: "APIS"
     repository: "https://github.com/SonyCSL/APIS"
@@ -1970,6 +1892,7 @@ Other:
   - name: "SmartGridToolbox"
     repository: "https://gitlab.com/SmartGridToolbox/SmartGridToolbox"
     description: "Designed to provide an extensible and flexible starting point for developing a wide variety of smart grid simulations and other applications."
+    license: "Apache License 2.0"
 
   - name: "OPEN"
     repository: "https://github.com/EPGOxford/OPEN"
@@ -1995,10 +1918,6 @@ Other:
     repository: "https://github.com/opennem/opennem-fe"
     description: "Aims to make the wealth of public National Electricity Market data more accessible to a wider audience."
 
-  - name: "Open Power System Data"
-    repository: "https://open-power-system-data.org/data-sources"
-    description: "A list of primary data sources that are helpful for power system modeling of Europe."
-
   - name: "The Public Utility Data Liberation Project"
     repository: "https://github.com/catalyst-cooperative/pudl"
     description: "Makes the US' energy data easier to access and use."
@@ -2006,6 +1925,7 @@ Other:
   - name: "Global Power Plant Database"
     repository: "https://github.com/wri/global-power-plant-database"
     description: "A comprehensive, global and open source database of power plants."
+    lincense: "Creative Commons-Attribution 4.0 / MIT License"
 
   - name: "electricitymap-contrib"
     repository: "https://github.com/tmrowco/electricitymap-contrib"
@@ -2042,6 +1962,7 @@ Other:
   - name: "pyEIA"
     repository: "https://github.com/thomastu/pyEIA"
     description: "An Energy Information Administration API Python client for researchers who need data."
+    license: "BSD 3-Clause-LBNL"
 
   - name: "EIA"
     repository: "https://github.com/ropensci/eia"
@@ -2050,6 +1971,7 @@ Other:
   - name: "atlite"
     repository: "https://github.com/PyPSA/atlite"
     description: "Light-weight version of Aarhus RE Atlas for converting weather data to power systems data."
+    license: "GNU General Public License v3.0 or later"
 
   - name: "NYISOToolkit"
     repository: "https://github.com/m4rz910/NYISOToolkit"
@@ -2058,10 +1980,12 @@ Other:
   - name: "Photovoltaic time series for European countries"
     repository: "https://zenodo.org/record/2613651#.XRtJRP7Rapo"
     description: "Comprises 38 years-long hourly time series representing the photovoltaic capacity factors in every European country (EU-28 plus Serbia, Bosnia-Herzegovina, Norway, and Switzerland)."
+    license: "Creative Common Attributions 4.0 International"
 
   - name: "SolarData"
     repository: "https://github.com/dazhiyang/SolarData"
     description: "Download and manipulate some publicly available solar datasets."
+    license: "GNU General Public License v2.0"
 
   - name: "UKgrid"
     repository: "https://github.com/RamiKrispin/UKgrid"
@@ -2069,7 +1993,7 @@ Other:
 
   - name: "USgrid"
     repository: "https://github.com/RamiKrispin/USgrid"
-    description: "The hourly demand and supply of electricity in the US."
+    description: "The hourly demand and supply of electric        ity in the US."
 
   - name: "ESIOS"
     repository: "https://github.com/SanPen/ESIOS"
@@ -2078,30 +2002,16 @@ Other:
   - name: "energy-data"
     repository: "https://github.com/owid/energy-data"
     description: "Data on global energy consumption (primary energy, per capita, and growth rates), energy mix, electricity mix and other relevant metrics."
-
-  - name: "OpenEI"
-    repository: "https://openei.org/wiki/Main_Page"
-    description: "A knowledge-sharing online community dedicated to connecting people with the latest information and data on energy resources from around the world."
+    license: "Creative Commons Attribution"
 
   - name: "Power grid frequency data base"
     repository: "https://osf.io/by5hu/"
     description: "This data set contains precisely time stamped (GPS referenced) frequency data from several power grids around the world in one second resolution and 1 hour excerpts of raw data."
-
-  - name: "EnergyDataSimulationChallenge"
-    repository: "https://github.com/enechange/EnergyDataSimulationChallenge"
-    description: "Allows applicants to demonstrate their ability to analyze and develop software that makes use of big energy production data."
+    lincense: "Creative Commons Attribution 4.0"
 
   - name: "disaggregator"
     repository: "https://github.com/DemandRegioTeam/disaggregator"
     description: "A set of tools for processing of spatial and temporal disaggregations of demands of electricity, heat and natural gas."
-
-  - name: "The FfE Open Data Portal"
-    repository: "http://opendata.ffe.de/"
-    description: "Offers an overview of free datasets for modelling energy demand and generation."
-
-  - name: "DKA Solar Centre"
-    repository: "http://dkasolarcentre.com.au/"
-    description: "Online hub for sharing solar-related knowledge and data from the Northern Territory, Australia."
 
   - name: "eiapy"
     repository: "https://github.com/systemcatch/eiapy"
@@ -2110,6 +2020,7 @@ Other:
   - name: "Power Station Dictionary"
     repository: "https://github.com/OSUKED/Power-Station-Dictionary"
     description: "A power station dictionary that enables mapping between various naming conventions and associated plant metadata."
+    license: "MIT License"
 
   - name: "ElexonDataPortal"
     repository: "https://github.com/OSUKED/ElexonDataPortal"
