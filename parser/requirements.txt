@@ -1,5 +1,5 @@
 pyyaml
 validators
+python-gitlab
 pygithub
 python-dateutil
-python-gitlab
