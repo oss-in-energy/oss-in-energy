@@ -17,7 +17,7 @@ jobs:
         run: pip install -r requirements.txt
         working-directory: parser
       - name: create table
-        run: python parser/yaml_to_html.py projects.yaml
+        run: python parser/yaml_to_html.py projects.yaml --invalid_url=abort
         env:
           GITHUB_API_KEY: ${{ secrets.GH_API_KEY }}
       - run: sudo apt-get install -y hugo
