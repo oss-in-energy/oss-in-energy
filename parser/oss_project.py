@@ -3,13 +3,15 @@ from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import date
+from enum import Enum
+from time import sleep
 from typing import Any, Callable, Dict, List, Optional, TextIO, Tuple
 from urllib.parse import urlparse
+from sys import stderr
 
+import requests
 import validators
 from dateutil.parser import parse
-from datetime import date
-
 
 from github_api import GithubRepo
 from gitlab_api import GitlabRepo
@@ -227,17 +229,39 @@ class OpenSourceProject:
         ]
 
 
+class InvalidUrlStrategy(Enum):
+    IGNORE = 1
+    ABORT = 2
+    REPORT = 3
+
+
 @dataclass
 class OpenSourceProjectList:
     projects: Dict[str, List[OpenSourceProject]]
 
     @classmethod
-    def from_yaml(cls, yaml_content) -> "OpenSourceProjectList":
+    def from_yaml(
+        cls, yaml_content, invalid_url_strategy: InvalidUrlStrategy = InvalidUrlStrategy.IGNORE
+    ) -> "OpenSourceProjectList":
         raw_project_list = []
 
         for category in yaml_content:
             for proj in yaml_content[category]:
                 raw_project_list.append((category, proj))
+
+        raw_project_list = raw_project_list [0:15]
+
+        invalid_urls = None
+        if invalid_url_strategy == InvalidUrlStrategy.ABORT or invalid_url_strategy == InvalidUrlStrategy.REPORT:
+            invalid_urls = generate_invalid_url_list(
+                list(map(lambda proj: proj[1]["repository"], raw_project_list))
+            )
+        if invalid_urls is not None:
+            print("The following repository URLs are invalid:", file=stderr)
+            for inv_url in invalid_urls:
+                print(f"- {inv_url[0]} (response code {inv_url[1]})", file=stderr)
+            if invalid_url_strategy == InvalidUrlStrategy.ABORT:
+                raise RuntimeError("Aborting due to invalid URLs")
 
         with ThreadPoolExecutor(max_workers=2) as executor:
             proj_list = executor.map(
@@ -262,7 +286,6 @@ class OpenSourceProjectList:
             for proj in set(projs):
                 projs.remove(proj)
             raise RuntimeError(f'Found duplicate projects: {", ".join(projs)}')
-
 
     def write_as_html(self, htmlfile: TextIO):
         for category in self.custom_sorted_categories():
@@ -319,3 +342,23 @@ class OpenSourceProjectList:
         categories = sorted([c for c in self.projects.keys() if "Other" not in c])
         categories.append("Other")
         return categories
+
+
+def generate_invalid_url_list(url_list: List[str]) -> Optional[List[Tuple[str, int]]]:
+    def do_request(url):
+        resp = requests.get(url)
+        if resp.status_code == 429:
+            # Rate limited... Try again
+            print(f"429 on {url}")
+            sleep(1.0)
+            resp = requests.get(url)
+        return (url, resp.status_code)
+
+    response_codes = []
+    for i, url in enumerate(url_list):
+        response_codes.append(do_request(url))
+
+    failures = list(filter(lambda resp: resp[1] != 200, response_codes))
+    if len(failures) == 0:
+        return None
+    return failures

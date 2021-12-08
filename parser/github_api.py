@@ -36,7 +36,13 @@ class GithubRepo:
                 "Cannot use API calls for Github organizations at the moment"
             )
         assert len(repo_path.split("/")) == 2
-        repo = github_api.get_repo(repo_path)
+        try:
+            repo = github_api.get_repo(repo_path)
+        except UnknownObjectException:
+            # invalid url
+            raise ValueError(
+                f"Cannot open github repo {url}"
+            )
         self.url = url
         self.repo = repo
         self.create_sorted_taglist()
