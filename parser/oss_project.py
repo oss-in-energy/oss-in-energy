@@ -13,7 +13,7 @@ import requests
 import validators
 from dateutil.parser import parse
 
-from github_api import GithubRepo
+from github_api import GithubRepo, github_api
 from gitlab_api import GitlabRepo
 from utils import Activity, License
 
@@ -273,6 +273,10 @@ class OpenSourceProjectList:
         projects = defaultdict(list)
         for category, proj in proj_list:
             projects[category].append(proj)
+
+        print(
+            f"GitHub RateLimit: remaining after {github_api.get_rate_limit().core.remaining}"
+        )
 
         return OpenSourceProjectList(projects)
 
