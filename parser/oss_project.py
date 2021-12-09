@@ -236,36 +236,70 @@ class InvalidUrlStrategy(Enum):
 
 
 @dataclass
-class OpenSourceProjectList:
-    projects: Dict[str, List[OpenSourceProject]]
+class RawOpenSourceProjectList:
+    projects: List[Tuple[str, Dict[str, Any]]]
 
     @classmethod
     def from_yaml(
         cls,
         yaml_content,
-        invalid_url_strategy: InvalidUrlStrategy = InvalidUrlStrategy.IGNORE,
-    ) -> "OpenSourceProjectList":
+    ) -> "RawOpenSourceProjectList":
 
-        raw_project_list = []
-
+        projects = []
         for category in yaml_content:
             for proj in yaml_content[category]:
-                raw_project_list.append((category, proj))
+                projects.append((category, proj))
+        return RawOpenSourceProjectList(projects)
 
-        invalid_urls = None
-        if (
-            invalid_url_strategy == InvalidUrlStrategy.ABORT
-            or invalid_url_strategy == InvalidUrlStrategy.REPORT
-        ):
-            invalid_urls = generate_invalid_url_list(
-                list(map(lambda proj: proj[1]["repository"], raw_project_list))
-            )
+    def repo_urls_are_valid(self) -> bool:
+        invalid_urls = generate_invalid_url_list(
+            list(map(lambda proj: proj[1]["repository"], self.projects))
+        )
         if invalid_urls is not None:
             print("The following repository URLs are invalid:", file=stderr)
             for inv_url in invalid_urls:
                 print(f"- {inv_url[0]} (response code {inv_url[1]})", file=stderr)
-            if invalid_url_strategy == InvalidUrlStrategy.ABORT:
-                raise RuntimeError("Aborting due to invalid URLs")
+            return False
+        return True
+
+    def homepage_urls_are_valid(self) -> bool:
+        invalid_urls = generate_invalid_url_list(
+            list(
+                filter(
+                    lambda proj: proj is not None,
+                    map(lambda proj: proj[1].get("homepage"), self.projects),
+                )
+            ),
+            parallel=True,
+        )
+        if invalid_urls is not None:
+            print("The following homepage URLs are invalid:", file=stderr)
+            for inv_url in invalid_urls:
+                print(f"- {inv_url[0]} (response code {inv_url[1]})", file=stderr)
+            return False
+        return True
+
+    def contains_duplicates(self) -> bool:
+        proj_list = list(map(lambda p: p[1]["repository"], self.projects))
+        unique_projs = set(proj_list)
+        if len(proj_list) != len(unique_projs):
+            for p in unique_projs:
+                proj_list.remove(p)
+            print(f'Found duplicate projects: {", ".join(proj_list)}', file=stderr)
+            return True
+        else:
+            return False
+
+
+@dataclass
+class OpenSourceProjectList:
+    projects: Dict[str, List[OpenSourceProject]]
+
+    @classmethod
+    def from_raw_list(
+        cls,
+        raw_project_list: RawOpenSourceProjectList,
+    ) -> "OpenSourceProjectList":
 
         with ThreadPoolExecutor(max_workers=1) as executor:
             proj_list = list(
@@ -274,7 +308,7 @@ class OpenSourceProjectList:
                         cat_proj[0],
                         OpenSourceProject.from_dict(cat_proj[1]),
                     ),
-                    raw_project_list,
+                    raw_project_list.projects,
                 )
             )
         projects = defaultdict(list)
@@ -288,16 +322,6 @@ class OpenSourceProjectList:
         )
 
         return OpenSourceProjectList(projects)
-
-    def check_for_duplicates(self):
-        projs = []
-        for proj_list in self.projects.values():
-            for proj in proj_list:
-                projs.append(proj.name)
-        if len(projs) != len(set(projs)):
-            for proj in set(projs):
-                projs.remove(proj)
-            raise RuntimeError(f'Found duplicate projects: {", ".join(projs)}')
 
     def write_as_html(self, htmlfile: TextIO):
         for category in self.custom_sorted_categories():
@@ -356,20 +380,34 @@ class OpenSourceProjectList:
         return categories
 
 
-def generate_invalid_url_list(url_list: List[str]) -> Optional[List[Tuple[str, int]]]:
+def generate_invalid_url_list(
+    url_list: List[str], parallel=False
+) -> Optional[List[Tuple[str, int]]]:
     def do_request(url):
         retry_attempt = 0
-        resp = requests.get(url)
-        while resp.status_code == 429:
-            print(f"Got rate-limited (response 429) for {url} - retrying", file=stderr)
-            retry_attempt += 1
-            sleep(2.0 * retry_attempt)
-            resp = requests.get(url)
+        try:
+            resp = requests.get(url, timeout=2)
+            while resp.status_code == 429:
+                print(
+                    f"Got rate-limited (response 429) for {url} - retrying", file=stderr
+                )
+                retry_attempt += 1
+                sleep(2.0 * retry_attempt)
+                resp = requests.get(url, timeout=2)
+        except requests.ReadTimeout:
+            print(f"URL {url} has timed out")
+            return (url, 408)
+
+        # print(f"URL {url} has status {resp.status_code}")
         return (url, resp.status_code)
 
-    response_codes = []
-    for i, url in enumerate(url_list):
-        response_codes.append(do_request(url))
+    if parallel:
+        nr_workers = None
+    else:
+        nr_workers = 1
+
+    with ThreadPoolExecutor(max_workers=nr_workers) as executor:
+        response_codes = list(executor.map(do_request, url_list))
 
     failures = list(filter(lambda resp: resp[1] != 200, response_codes))
     if len(failures) == 0:
