@@ -358,10 +358,12 @@ class OpenSourceProjectList:
 
 def generate_invalid_url_list(url_list: List[str]) -> Optional[List[Tuple[str, int]]]:
     def do_request(url):
+        retry_attempt = 0
         resp = requests.get(url)
         while resp.status_code == 429:
             print(f"Got rate-limited (response 429) for {url} - retrying", file=stderr)
-            sleep(2.0)
+            retry_attempt += 1
+            sleep(2.0 * retry_attempt)
             resp = requests.get(url)
         return (url, resp.status_code)
 
