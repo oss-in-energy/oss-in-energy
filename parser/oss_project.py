@@ -267,7 +267,7 @@ class OpenSourceProjectList:
             if invalid_url_strategy == InvalidUrlStrategy.ABORT:
                 raise RuntimeError("Aborting due to invalid URLs")
 
-        with ThreadPoolExecutor(max_workers=2) as executor:
+        with ThreadPoolExecutor(max_workers=1) as executor:
             proj_list = list(
                 executor.map(
                     lambda cat_proj: (
