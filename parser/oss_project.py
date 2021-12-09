@@ -387,13 +387,13 @@ def generate_invalid_url_list(
     def do_request(url):
         retry_attempt = 0
         try:
-            resp = requests.get(url, timeout=2)
+            resp = requests.get(url, timeout=5)
             while resp.status_code == 429:
                 info(f"Got rate-limited (response 429) for {url} - retrying")
                 retry_attempt += 1
                 sleep(2.0 * retry_attempt)
-                resp = requests.get(url, timeout=2)
-        except requests.ReadTimeout:
+                resp = requests.get(url, timeout=5)
+        except (requests.ReadTimeout, requests.ConnectTimeout):
             warning(f"URL {url} has timed out")
             return (url, 408)
 
