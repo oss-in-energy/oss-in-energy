@@ -14,7 +14,7 @@ from utils import Activity, License, is_release_tag, sort_tags_alphanumeric
 
 api_key = environ.get("GITHUB_API_KEY")
 github_api = Github() if api_key is None else Github(api_key)
-print(f"RateLimit: remaining {github_api.get_rate_limit().core.remaining}")
+print(f"GitHub rate limit: remaining {github_api.get_rate_limit().core.remaining}")
 print(
     f"Resets in {round((github_api.get_rate_limit().core.reset.replace(tzinfo=timezone.utc) - datetime.now(timezone.utc)).seconds / 60, 1)} Minutes"
 )
