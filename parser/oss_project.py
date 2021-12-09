@@ -263,16 +263,20 @@ class OpenSourceProjectList:
                 raise RuntimeError("Aborting due to invalid URLs")
 
         with ThreadPoolExecutor(max_workers=2) as executor:
-            proj_list = executor.map(
-                lambda cat_proj: (
-                    cat_proj[0],
-                    OpenSourceProject.from_dict(cat_proj[1]),
-                ),
-                raw_project_list,
+            proj_list = list(
+                executor.map(
+                    lambda cat_proj: (
+                        cat_proj[0],
+                        OpenSourceProject.from_dict(cat_proj[1]),
+                    ),
+                    raw_project_list,
+                )
             )
         projects = defaultdict(list)
         for category, proj in proj_list:
             projects[category].append(proj)
+
+        print(f"Successfully parsed {len(proj_list)} projects")
 
         print(
             f"GitHub RateLimit: remaining after {github_api.get_rate_limit().core.remaining}"
