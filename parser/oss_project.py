@@ -4,10 +4,10 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import date
 from enum import Enum
+from sys import stderr
 from time import sleep
 from typing import Any, Callable, Dict, List, Optional, TextIO, Tuple
 from urllib.parse import urlparse
-from sys import stderr
 
 import requests
 import validators
@@ -241,7 +241,9 @@ class OpenSourceProjectList:
 
     @classmethod
     def from_yaml(
-        cls, yaml_content, invalid_url_strategy: InvalidUrlStrategy = InvalidUrlStrategy.IGNORE
+        cls,
+        yaml_content,
+        invalid_url_strategy: InvalidUrlStrategy = InvalidUrlStrategy.IGNORE,
     ) -> "OpenSourceProjectList":
 
         raw_project_list = []
@@ -251,7 +253,10 @@ class OpenSourceProjectList:
                 raw_project_list.append((category, proj))
 
         invalid_urls = None
-        if invalid_url_strategy == InvalidUrlStrategy.ABORT or invalid_url_strategy == InvalidUrlStrategy.REPORT:
+        if (
+            invalid_url_strategy == InvalidUrlStrategy.ABORT
+            or invalid_url_strategy == InvalidUrlStrategy.REPORT
+        ):
             invalid_urls = generate_invalid_url_list(
                 list(map(lambda proj: proj[1]["repository"], raw_project_list))
             )
