@@ -16,10 +16,15 @@ jobs:
       - name: install requirements
         run: pip install -r requirements.txt
         working-directory: parser
-      - name: create table
-        run: python parser/yaml_to_html.py projects.yaml --invalid_url=abort
+      - name: validate input
+        run: python parser/yaml_to_html.py projects.yaml --validate-only -v
         env:
           GITHUB_API_KEY: ${{ secrets.GH_API_KEY }}
+      - name: create table
+        run: python parser/yaml_to_html.py projects.yaml --skip-validation -v
+        env:
+          GITHUB_API_KEY: ${{ secrets.GH_API_KEY }}
+        if: ${{ github.ref == 'refs/heads/master' }}
       - run: sudo apt-get install -y hugo
       - name: generate page
         run: |
