@@ -8,7 +8,7 @@
             "program": "parser/yaml_to_html.py",
             "console": "integratedTerminal",
             "cwd": "${workspaceFolder}",
-            "args": ["projects.yaml"],
+            "args": ["projects.yaml", "--invalid_url=abort"],
             "justMyCode": true
         },
         {
