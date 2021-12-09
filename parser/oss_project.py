@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 import requests
 import validators
 from dateutil.parser import parse
+from logging import info, warning, error, debug
 
 from github_api import GithubRepo, github_api
 from gitlab_api import GitlabRepo
@@ -256,9 +257,9 @@ class RawOpenSourceProjectList:
             list(map(lambda proj: proj[1]["repository"], self.projects))
         )
         if invalid_urls is not None:
-            print("The following repository URLs are invalid:", file=stderr)
+            error("The following repository URLs are invalid:")
             for inv_url in invalid_urls:
-                print(f"- {inv_url[0]} (response code {inv_url[1]})", file=stderr)
+                error(f"- {inv_url[0]} (response code {inv_url[1]})")
             return False
         return True
 
@@ -273,9 +274,9 @@ class RawOpenSourceProjectList:
             parallel=True,
         )
         if invalid_urls is not None:
-            print("The following homepage URLs are invalid:", file=stderr)
+            error("The following homepage URLs are invalid:")
             for inv_url in invalid_urls:
-                print(f"- {inv_url[0]} (response code {inv_url[1]})", file=stderr)
+                error(f"- {inv_url[0]} (response code {inv_url[1]})")
             return False
         return True
 
@@ -285,7 +286,7 @@ class RawOpenSourceProjectList:
         if len(proj_list) != len(unique_projs):
             for p in unique_projs:
                 proj_list.remove(p)
-            print(f'Found duplicate projects: {", ".join(proj_list)}', file=stderr)
+            error(f'Found duplicate projects: {", ".join(proj_list)}')
             return True
         else:
             return False
@@ -315,9 +316,9 @@ class OpenSourceProjectList:
         for category, proj in proj_list:
             projects[category].append(proj)
 
-        print(f"Successfully parsed {len(proj_list)} projects")
+        info(f"Successfully parsed {len(proj_list)} projects")
 
-        print(
+        info(
             f"GitHub RateLimit: remaining after {github_api.get_rate_limit().core.remaining}"
         )
 
@@ -388,17 +389,15 @@ def generate_invalid_url_list(
         try:
             resp = requests.get(url, timeout=2)
             while resp.status_code == 429:
-                print(
-                    f"Got rate-limited (response 429) for {url} - retrying", file=stderr
-                )
+                info(f"Got rate-limited (response 429) for {url} - retrying")
                 retry_attempt += 1
                 sleep(2.0 * retry_attempt)
                 resp = requests.get(url, timeout=2)
         except requests.ReadTimeout:
-            print(f"URL {url} has timed out")
+            warning(f"URL {url} has timed out")
             return (url, 408)
 
-        # print(f"URL {url} has status {resp.status_code}")
+        debug(f"URL {url} has status {resp.status_code}")
         return (url, resp.status_code)
 
     if parallel:
