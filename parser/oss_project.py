@@ -243,13 +243,12 @@ class OpenSourceProjectList:
     def from_yaml(
         cls, yaml_content, invalid_url_strategy: InvalidUrlStrategy = InvalidUrlStrategy.IGNORE
     ) -> "OpenSourceProjectList":
+
         raw_project_list = []
 
         for category in yaml_content:
             for proj in yaml_content[category]:
                 raw_project_list.append((category, proj))
-
-        raw_project_list = raw_project_list [0:15]
 
         invalid_urls = None
         if invalid_url_strategy == InvalidUrlStrategy.ABORT or invalid_url_strategy == InvalidUrlStrategy.REPORT:
