@@ -1702,11 +1702,6 @@ Other:
     description: "An R package wrapping the US Energy Information Administration open data API."
     license: "MIT License"
 
-  - name: "atlite"
-    repository: "https://github.com/PyPSA/atlite"
-    description: "Light-weight version of Aarhus RE Atlas for converting weather data to power systems data."
-    license: "GNU General Public License v3.0 or later"
-
   - name: "NYISOToolkit"
     repository: "https://github.com/m4rz910/NYISOToolkit"
     description: "A collection of modules for accessing power system data, generating statistics, and creating visualizations from the New York Independent System Operator."
