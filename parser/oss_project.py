@@ -391,12 +391,12 @@ def generate_invalid_url_list(
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
         }
         try:
-            resp = requests.get(url, timeout=5, headers=header)
+            resp = requests.get(url, timeout=10, headers=header)
             while resp.status_code == 429:
                 info(f"Got rate-limited (response 429) for {url} - retrying")
                 retry_attempt += 1
                 sleep(2.0 * retry_attempt)
-                resp = requests.get(url, timeout=5, headers=header)
+                resp = requests.get(url, timeout=10, headers=header)
         except (requests.ReadTimeout, requests.ConnectTimeout):
             warning(f"URL {url} has timed out")
             return (url, 408)
