@@ -16,7 +16,6 @@ Forecasting:
   - name: "Openstf"
     repository: "https://github.com/alliander-opensource/openstf"
     description: "Python package which is used to make short term forecasts for the energy sector"
-    homepage: "https://alliander-opensource.github.io/openstf/#"
 
 Interfaces:
   - name: "CoSIF"
