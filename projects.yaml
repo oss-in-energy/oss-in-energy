@@ -1421,10 +1421,6 @@ Other:
     repository: "https://github.com/OpenEnergyPlatform/oeplatform"
     description: "Aims to ensure quality, transparency and reproducibility in energy system research. It is a collection of various tools and information and that help working with energy-related data."
 
-  - name: "oemof"
-    repository: "https://github.com/oemof/oemof"
-    description: "Open Energy Modelling Framework - A Python toolbox for energy system modeling and optimization. A community driven, modular, flexible and generic software project."
-
   - name: "pyGRETA"
     repository: "https://github.com/tum-ens/pyGRETA"
     description: "Python Generator of REnewable Time series and mAps: a tool that generates high-resolution potential maps and time series for user-defined regions within the globe."
