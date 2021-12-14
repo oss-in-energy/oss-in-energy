@@ -215,6 +215,7 @@ Platform:
     repository: "https://github.com/seapath"
     description: "Aims at developing a “reference design” and “industrial grade” open source real-time platform that can run virtualized automation and protection application"
     homepage: "https://www.lfenergy.org/projects/SEAPATH/"
+    license: "Apache License 2.0"
 
   - name: "EF-Pi"
     repository: "https://github.com/flexiblepower/fpai-core"
