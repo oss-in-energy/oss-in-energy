@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Source Projects on Open-Source in Energy</title>
+    <link>https://oss-in-energy.github.io/oss-in-energy/</link>
+    <description>Recent content in Open Source Projects on Open-Source in Energy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 Dec 2000 23:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://oss-in-energy.github.io/oss-in-energy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://oss-in-energy.github.io/oss-in-energy/about/</link>
+      <pubDate>Sun, 31 Dec 2000 23:00:00 +0000</pubDate>
+      
+      <guid>https://oss-in-energy.github.io/oss-in-energy/about/</guid>
+      <description>Open-Source in Energy is a project from the Chair of Automation of Complex Power Systems (ACS) at RWTH-Aachen.de
+Icons taken from https://fontawesome.com/ under CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+Website is created using Hugo and the hyde theme
+Third Party Inclusion This website is hosted by Github using Github Pages. The Github Global Privacy Practices are available here</description>
+    </item>
+    
+  </channel>
+</rss>
